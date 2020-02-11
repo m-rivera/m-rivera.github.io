@@ -34,6 +34,8 @@ navigation:
     url: /
   - text: Work
     url: /work
+  - text: Research
+    url: /research
   - text: About
     url: /about
 
