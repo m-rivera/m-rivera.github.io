@@ -1,6 +1,9 @@
 ---
-layout: page
-title: About
+layout: default
+permalink: about
 ---
 
-This website is adapted from the [Lanyon](https://github.com/poole/lanyon) theme for [Jekyll](https://github.com/poole/hyde).
+# About
+
+This static website was created using <a href="https://github.com/jekyll/jekyll">Jekyll</a> and the <a href="https://github.com/wemake-services/jekyll-theme-hackcss">jekyll-theme-hackcss</a> theme.
+

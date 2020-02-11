@@ -1,38 +1,50 @@
 ---
 layout: default
-title: Home
 ---
 
-<div class="posts">
-  {% for post in paginator.posts %}
-  <div class="post">
-    <h1 class="post-title">
-      <a href="{{ site.baseurl }}/{{ post.url }}">
-        {{ post.title }}
-      </a>
-    </h1>
+<div>
 
-    <span class="post-date">{{ post.date | date_to_string }}</span>
+  <section>
+    <h1>Miguel's Online Grimoire</h1>
 
-    {{ post.content }}
-  </div>
-  {% endfor %}
+    <p>
+    When Miguel wants to store something, he puts it in the <b>MOG</b> (Miguel's Online Grimoire). If you have ended up in the <b>MOG</b> by accident, pray you find your way out, lest you be swallowed whole.
+    </p>
+  </section>
+
+  <section>
+    <h2>What is Miguel?</h2>
+
+    <p>
+    <b>In brief:</b> Miguel Rivera is a Software Developer, Computational Chemist, and Musician.</p>
+
+    <p>
+    <b>In long-winded:</b> Miguel is a well-meaning warlock who knows varying amounts about Python, Quantum Chemistry, Minesweeper, Linux, Maths, Cookery, vim, Jazz, Games, Literature, and other less arcane disciplines.
+    </p>
+  </section>
+
+  <section>
+    <h2>What is the MOG?</h2>
+
+    <p>
+    Miguel's Online Grimoire (<b>MOG</b>) is a repository of Miguel Rivera's professional outputs and personal projects. It is written in a way that is accessible to most unsuspecting victims that may fall within its folds.
+    The purposes of the <b>MOG</b> are to:
+    <ul>
+        <li>Offer a portrait of Miguel, the Well-Meaning Warlock (<b>MWMW</b>, pronounced 'moo-moo'), for anyone intersted in collaborating with him.</li>
+        <li>Store ancient knowledge that <b>MWMW</b> is likely to forget.</li>
+        <li>Disseminate the wizardry that <b>MWMW</b> has learned to explain well.</li>
+        <li>Provide a platform for <b>MWMW</b>'s corpus of creative machinations.</li>
+    </ul>
+    </p>
+  </section>
+
+  <section>
+    <h2>What is my destination?</h2>
+
+    <p>
+      <ul>
+          <li>If you want to find out about Miguel Rivera's work, go to <a href="work">Work</a>.</li>
+      </ul>
+    </p>
+  </section>
 </div>
-
-<div class="pagination">
-  {% if paginator.next_page %}
-    <a class="pagination-item older" href="{{ site.baseurl }}/page{{paginator.next_page}}">Older</a>
-  {% else %}
-    <span class="pagination-item older">Older</span>
-  {% endif %}
-  {% if paginator.previous_page %}
-    {% if paginator.page == 2 %}
-      <a class="pagination-item newer" href="{{ site.baseurl }}/">Newer</a>
-    {% else %}
-      <a class="pagination-item newer" href="{{ site.baseurl }}/page{{paginator.previous_page}}">Newer</a>
-    {% endif %}
-  {% else %}
-    <span class="pagination-item newer">Newer</span>
-  {% endif %}
-</div>
-
