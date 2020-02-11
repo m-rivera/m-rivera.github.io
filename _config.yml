@@ -32,10 +32,10 @@ email: mig.riv.c@gmail.com
 navigation:
   - text: Home
     url: /
+  - text: Work
+    url: /work
   - text: About
     url: /about
-#  - text: Examples
-#    url: /examples
 
 projects:
   - name: git-secret
