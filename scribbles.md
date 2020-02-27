@@ -1,6 +1,6 @@
 ---
 layout: default
-permalink: research
+permalink: scribbles
 ---
 
 # Pleasantries
