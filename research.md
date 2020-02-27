@@ -48,6 +48,10 @@ permalink: research
     href="https://pubs.acs.org/doi/10.1021/acs.jpclett.7b02893"><i>J.  Phys.
     Chem. Lett.</i> 2017, **8**, 6148-6153</a>
 
+    <p align="center">
+      <img height="250" src="tocs/jpcl.png">
+    </p>
+
     This was an investigation into an unusual property of some organic
     molecular crystals called <i>Aggregation Induced Emission</i> (AIE).
     Normally, if molecules emit light when they are dissolved in a solvent
@@ -106,6 +110,10 @@ permalink: research
     href="https://pubs.acs.org/doi/10.1021/acs.jctc.8b01180"><i>J. Chem. Theory
     Comput.</i> 2019, **15**, 2504-2516</a>, <a
     href="https://chemrxiv.org/articles/ONIOM_QM_QM_Electrostatic_Embedding_Schemes_for_Photochemistry_in_Molecular_Crystals/7364768">preprint</a>
+
+    <p align="center">
+      <img height="250" src="tocs/jctc.png">
+    </p>
 
     This was my first paper as lead author, and ended up being quite the
     behemoth, being the longest one written during my PhD. In here, we
@@ -182,6 +190,11 @@ permalink: research
     href="https://pubs.rsc.org/en/content/articlelanding/2020/TC/C9TC05717J#!divAbstract"><i>J.
     Mater. Chem. C</i>, 2020, **8**, 2558-2568 </a>, <a
     href="https://chemrxiv.org/articles/Molecular_and_Crystalline_Requirements_for_Solid_State_Fluorescence_Exploiting_Excited_State_Intramolecular_Proton_Transfer/8283710">preprint</a>
+
+    <p align="center">
+      <img height="250" src="tocs/jmatchem.png">
+    </p>
+
     This was another great output by Michael. Essentially, he used the
     families of molecules from <a
     href="https://pubs.acs.org/doi/10.1021/acs.jpclett.7b02893"><i>J.  Phys.
@@ -226,6 +239,10 @@ permalink: research
     href="https://onlinelibrary.wiley.com/doi/10.1002/jcc.26144"><i>J. Comput.
     Chem.</i>, 2020</a>, <a
     href="https://chemrxiv.org/articles/Fromage_A_Library_for_the_Study_of_Molecular_Crystal_Excited_States_at_the_Aggregate_Scale/9786041">preprint</a>
+
+    <p align="center">
+      <img height="250" src="tocs/jcc.png">
+    </p>
 
     This paper is maybe the most technical yet, but I made sure that all of the
     figures were very attractive, in order to not put off potential readers.
