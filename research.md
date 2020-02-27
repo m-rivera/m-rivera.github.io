@@ -2,8 +2,9 @@
 layout: default
 permalink: research
 ---
+# Research
 
-# Pleasantries
+## Pleasantries
 
  A wrinkled page, smelling of pickle and sulphur. You have found my
  publications list, each paper is accompanied by a description of the arcane
@@ -12,7 +13,7 @@ permalink: research
  with generalisations, and be sure to inspect the original tomes for a more
  rigorous account.
 
-# Overview
+## Overview
  Currently, all of my publications relate in some way to <i>organic molecular
  crystals</i>, that is, the state of matter where molecules, made up of mostly
  carbon, stack together like Lego bricks in order to form a solid. An ice cube,
@@ -39,7 +40,7 @@ permalink: research
  light interacting with the material, and then translate them into computer
  programs, which supercomputers are able to understand.
 
-# List of Publications
+## List of Publications
 
 - **How inter-and intramolecular processes dictate aggregation-induced emission
   in crystals undergoing excited-state proton transfer**
