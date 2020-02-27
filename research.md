@@ -198,6 +198,6 @@ permalink: research
 ***
 
 
-To find un up-to-date list, you may peruse my <a
+To find an up-to-date list, you may peruse my <a
 href="https://scholar.google.co.uk/citations?user=jKqXsfAAAAAJ&hl=en">Google
 Scholar</a>.
