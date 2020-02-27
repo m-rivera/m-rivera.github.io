@@ -14,7 +14,7 @@ permalink: research
 
 # Overview
  Currently, all of my publications relate in some way to <i>organic molecular
- crystals</i>, that is the state of matter where molecules, made up of mostly
+ crystals</i>, that is, the state of matter where molecules, made up of mostly
  carbon, stack together like Lego bricks in order to form a solid. An ice cube,
  for example, is a molecular crystal of water (though not an organic one). An
  example of an organic molecular crystal would be a paracetamol tablet.
@@ -22,18 +22,17 @@ permalink: research
  Organic molecular crystals have many applications, and I am in particular
  interested in their uses which have to do with light. They are used as
  materials for lasers, solar pannels, electronics, sensors in the bloodstream
- for medical applications, and LEDs (you might have heard of OLEDs and can
- guess what the 'O' stands for). These materials are light, sometimes flexible,
- and made up of very common atoms, making them more sustainable than ones which
- require rare elements.
+ for medical applications, and LEDs (you might have heard of OLEDs). These
+ materials are light, sometimes flexible, and made up of very common atoms,
+ making them more sustainable than ones which require rare elements.
 
- In order to discover and design these materials, it is extremely handy to be
- able to model them on a computer. This way instead of spending millions of
- hours and chemicals in a lab trying out different stuff, you spend hundreds of
- hours and coffee pots in front of a computer, trying out different molecular
- crystals. Once you have narrowed down some nice candidates, you can send over
- the recipe to some experimental chemists, who can actually build the thing,
- end hopefully build some new material.
+ In order to discover and design them, it is extremely handy to be able to
+ model them on a computer. This way, instead of spending millions of hours and
+ chemicals in a lab trying out different experiments, you spend hundreds of
+ hours and coffee pots in front of a computer, trying out different
+ calculations.  Once you have narrowed down some nice candidate, you can send
+ over the recipe to some experimental chemists, who can actually build the
+ thing, end hopefully build some new material.
 
  My role in this picture is to write the programs which model the crystals in
  question. I design the mathematical tools to model the quantum physics of
@@ -74,7 +73,7 @@ permalink: research
     changes a lot about how the atoms move, and can sometime lead to the
     material losing the energy from the absorbed photon without emitting any
     photon in return (through heat).  This is why we care about 'excited state
-    proton transfer' moleculess. 'Excited state' means after absorption, and a
+    proton transfer' molecules. 'Excited state' means after absorption, and a
     'proton' is the name of the hydrogen nucleus, therefore the title of the
     paper refers to crystals made up of molecules which have hydrogens hopping
     around upon absorbing a photon.
@@ -146,7 +145,7 @@ permalink: research
     apostrophe indicates that it is not the same as the previous QM.
 
     By using ONIOM, the excited state was represented, taking into account all
-    of the interactions between it, and its nearest neighbours. However, the
+    the interactions between it, and its nearest neighbours. However, the
     interactions between molecules have many components, some of which reach
     further than just the neighbouring molecules. In particular, electrostatic
     interactions have a range spanning thousands of atoms, but we are only in a
@@ -183,6 +182,39 @@ permalink: research
     href="https://pubs.rsc.org/en/content/articlelanding/2020/TC/C9TC05717J#!divAbstract"><i>J.
     Mater. Chem. C</i>, 2020, **8**, 2558-2568 </a>, <a
     href="https://chemrxiv.org/articles/Molecular_and_Crystalline_Requirements_for_Solid_State_Fluorescence_Exploiting_Excited_State_Intramolecular_Proton_Transfer/8283710">preprint</a>
+    This was another great output by Michael. Essentially, he used the
+    families of molecules from <a
+    href="https://pubs.acs.org/doi/10.1021/acs.jpclett.7b02893"><i>J.  Phys.
+    Chem. Lett.</i> 2017, **8**, 6148-6153</a>, only including even more
+    species, and a neighbouring family, in order to have enough diverse results
+    to start extracting statistical conclusions. The focus remained on
+    molecules used in lasers as crystals, which had a hydrogen atom
+    transferring across the molecule upon absorption of a photon.
+
+    I don't want to go too far in depth on this one, but what is most valuable
+    here, in my opinion, is the development of a systematic way of approaching
+    the modeling of these systems. The aim was to be very comprehensive, so as
+    to weigh and compare all of the factors which could determine the emission
+    of light in these materials, or the absence thereof. By repeating this very
+    broad and time-consuming analysis for all-in-all eleven molecules, Michael
+    developed a workflow which we have since then used as a template for
+    investigating new chemistries.
+
+    The outcome was the formulation of a set of requirements for these proton
+    transfer molecular crystals to be efficiently luminescent (very bright). We
+    found that encouraging the transfer of the proton (i.e. hydrogen) was a
+    strong contributing factor. Making the molecules stack in parallel
+    arrangements was unfavourable for emission, but the transfer of the proton
+    would usually trump this. Finally, making more rigid molecules would help
+    encourage the emission of light, by discouraging the motions of the
+    molecule which would allow it to lose its energy through heat and not
+    photons.
+
+    In this paper, I developed a few tools to measure how tightly packed the
+    molecules were in their crystal environment. I also assessed the importance
+    of the interactions from very far ranging molecules within the crystal on
+    the behaviour of the excited state. Finally, I handled a significant
+    portion of the revision process.
 
 ***
 
@@ -194,6 +226,43 @@ permalink: research
     href="https://onlinelibrary.wiley.com/doi/10.1002/jcc.26144"><i>J. Comput.
     Chem.</i>, 2020</a>, <a
     href="https://chemrxiv.org/articles/Fromage_A_Library_for_the_Study_of_Molecular_Crystal_Excited_States_at_the_Aggregate_Scale/9786041">preprint</a>
+
+    This paper is maybe the most technical yet, but I made sure that all of the
+    figures were very attractive, in order to not put off potential readers.
+    This is an account of the program which compiles all of the tools developed
+    during my PhD. **fromage** (FRamewOrk for Molecular AGgregate Excitations)
+    is a Python library designed to assist in modeling excited states in
+    molecular crystals. The need for it came about because, as discussed above,
+    our perspective in this field encompasses molecules, clusters of molecules,
+    and crystals, and these three orders of magnitude typically require
+    different sets of tools to study.  **fromage** offers ways of jumping
+    between the three both for newcomers (who are supplied with readymade
+    programs to use) and experts (who can use parts of **fromage** in their own
+    short programs).
+
+    The bulk of the paper presents the readymade programs one by one,
+    explaining how they work, showing how to use them, and concluding with an
+    example for a real molecular crystal, relevant to applications to do with
+    light. The series of programs had the following uses:
+    - measure the available space for a molecule inside a crystal to wiggle
+around
+    - detect neighbouring pairs of molecules and measure their conformations
+    - evaluate how much excited states involve neighbour molecules instead of
+just the one
+    - find how these excited states were shared between molecules calculate the
+    - excited states whilst taking into account their crystalline
+        environment, as is described here: <a
+        href="https://pubs.acs.org/doi/10.1021/acs.jctc.8b01180"><i>J. Chem.
+        Theory Comput.</i> 2019, **15**, 2504-2516</a>
+
+    In the end this paper is more of a good way of advertising the program, and
+    also provides something to cite for future users. The real bulk of the work
+    is in <a href="https://github.com/Crespo-Otero-group/fromage">the source
+    code</a> and <a href="https://fromage.readthedocs.io/en/latest/">the
+    documentation</a> for **fromage**. Understanding the science is one thing,
+    but it's really the object of the program itself which I am proud of, since
+    at the beginning I didn't know any of the tools to make a sustainable
+    program, a webpage, a tutorial, a cheese logo etc.
 
 ***
 
