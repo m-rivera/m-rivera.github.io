@@ -27,7 +27,7 @@ theme_mode: markdown  # choices are: 'dark', 'standard', 'markdown'
 
 # Customizations
 your_name: miguel.rivera
-email: mig.riv.c@gmail.com
+email: m.rivera@qmul.ac.uk
 
 navigation:
   - text: Home
