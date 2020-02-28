@@ -18,7 +18,14 @@ permalink: research
  crystals</i>, that is, the state of matter where molecules, made up of mostly
  carbon, stack together like Lego bricks in order to form a solid. An ice cube,
  for example, is a molecular crystal of water (though not an organic one). An
- example of an organic molecular crystal would be a paracetamol tablet.
+ example of an organic molecular crystal would be a paracetamol tablet, and
+ here is roughly what it looks like (I also included the benzene crystal
+ because I think it looks a little nicer):
+
+  <p align="center">
+    <img height="400" src="images/molecular_crystal.png">
+  </p>
+
 
  Organic molecular crystals have many applications, and I am in particular
  interested in their uses which have to do with light. They are used as
@@ -50,7 +57,7 @@ permalink: research
     Chem. Lett.</i> 2017, **8**, 6148-6153</a>
 
     <p align="center">
-      <img height="250" src="tocs/jpcl.png">
+      <img height="250" src="images/tocs/jpcl.png">
     </p>
 
     This was an investigation into an unusual property of some organic
@@ -113,7 +120,7 @@ permalink: research
     href="https://chemrxiv.org/articles/ONIOM_QM_QM_Electrostatic_Embedding_Schemes_for_Photochemistry_in_Molecular_Crystals/7364768">preprint</a>
 
     <p align="center">
-      <img height="250" src="tocs/jctc.png">
+      <img height="250" src="images/tocs/jctc.png">
     </p>
 
     This was my first paper as lead author, and ended up being quite the
@@ -143,15 +150,19 @@ permalink: research
     we developed a way of combining several ground and excited state
     calculations to model one central molecule in the excited state,
     surrounded by molecules in the ground state taken from their theoretical
-    positions in the crystal. This combination of methods is based on a
-    previously designed method called ONIOM (Our own N-layered Integrated
-    Molecular Orbital and Molecular mechanics). The full name is somewhat
-    cryptic, but the acronym is meant to conjure the image of an onion, with
-    layers modelled with different levels of theory (excited state, ground
-    state, or even non-quantum methods). In this case, we care about using
-    quantum methods for both layers of our onion, thus the method is said to be
-    an ONIOM QM:QM' method where QM stands for Quantum Mechanics, and the
-    apostrophe indicates that it is not the same as the previous QM.
+    positions in the crystal. It looks a bit like this:
+
+    <p align="center"><img height="250" src="images/cluster.png"></p>
+
+    This combination of methods is based on a previously designed method called
+    ONIOM (Our own N-layered Integrated Molecular Orbital and Molecular
+    mechanics). The full name is somewhat cryptic, but the acronym is meant to
+    conjure the image of an onion, with layers modelled with different levels
+    of theory (excited state, ground state, or even non-quantum methods). In
+    this case, we care about using quantum methods for both layers of our
+    onion, thus the method is said to be an ONIOM QM:QM' method where QM stands
+    for Quantum Mechanics, and the apostrophe indicates that it is not the same
+    as the previous QM.
 
     By using ONIOM, the excited state was represented, taking into account all
     the interactions between it, and its nearest neighbours. However, the
@@ -193,7 +204,7 @@ permalink: research
     href="https://chemrxiv.org/articles/Molecular_and_Crystalline_Requirements_for_Solid_State_Fluorescence_Exploiting_Excited_State_Intramolecular_Proton_Transfer/8283710">preprint</a>
 
     <p align="center">
-      <img height="250" src="tocs/jmatchem.png">
+      <img height="250" src="images/tocs/jmatchem.png">
     </p>
 
     This was another great output by Michael. Essentially, he used the
@@ -242,7 +253,7 @@ permalink: research
     href="https://chemrxiv.org/articles/Fromage_A_Library_for_the_Study_of_Molecular_Crystal_Excited_States_at_the_Aggregate_Scale/9786041">preprint</a>
 
     <p align="center">
-      <img height="250" src="tocs/jcc.png">
+      <img height="250" src="images/tocs/jcc.png">
     </p>
 
     This paper is maybe the most technical yet, but I made sure that all of the
