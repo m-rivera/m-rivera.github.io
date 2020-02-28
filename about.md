@@ -3,7 +3,7 @@ layout: default
 permalink: about
 ---
 
-## About
+# About
 ## Pleasantries
 
 A glossy page, smelling of lavender and cocoa. Here, you see scribbles in
