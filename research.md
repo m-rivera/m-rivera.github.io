@@ -75,7 +75,7 @@ permalink: research
     never an emission of light coming from nowhere. Thus, whatever determines
     AIE will have a lot to do with what happens to the molecule after it
     absorbs light. In this case, the hydrogen moving across the molecule
-    changes a lot about how the atoms move, and can sometime lead to the
+    changes a lot about how the atoms move, and can sometimes lead to the
     material losing the energy from the absorbed photon without emitting any
     photon in return (through heat).  This is why we care about 'excited state
     proton transfer' molecules. 'Excited state' means after absorption, and a
@@ -86,16 +86,16 @@ permalink: research
     In this family of molecules, some had AIE, while others remained dark in
     the crystal, despite the difference between the molecules being of only a
     few atoms. It surfaced that the seemingly small change at the scale of the
-    molecule amplified into a large change in how into how it stacked together
-    to make a crystal. You can understand it like this: if you were playing
-    Jenga with L-shaped blocks, you wouldn't be able to stack the tower in the
-    usual way, you would have to come up with a more elaborate architecture.
-    The same was true for these crystals. Therefore there were changes within
-    the molecule itself (intra-) and between the molecules due to the stacking
-    (inter-). These changes were subtly correlated, making it impossible to
-    understand how one affected AIE without the other. The main point of view
-    of the paper was to understand the interplay between these inter- and
-    intramolecular processes, as the title suggests.
+    molecule amplified into a large change in how it stacked together to make a
+    crystal. You can understand it like this: if you were playing Jenga with
+    L-shaped blocks, you wouldn't be able to stack the tower in the usual way,
+    you would have to come up with a more elaborate architecture.  The same was
+    true for these crystals. Therefore there were changes within the molecule
+    itself (intra-) and between the molecules due to the stacking (inter-).
+    These changes were subtly correlated, making it impossible to understand
+    how one affected AIE without the other. The main point of view of the paper
+    was to understand the interplay between these inter- and intramolecular
+    processes, as the title suggests.
 
     This was mostly the work of my groupmate Michael, though I helped in
     designing and adapting tools to model the 'excited state' molecule (read:
@@ -147,7 +147,7 @@ permalink: research
     previously designed method called ONIOM (Our own N-layered Integrated
     Molecular Orbital and Molecular mechanics). The full name is somewhat
     cryptic, but the acronym is meant to conjure the image of an onion, with
-    layers modeled with different levels of theory (excited state, ground
+    layers modelled with different levels of theory (excited state, ground
     state, or even non-quantum methods). In this case, we care about using
     quantum methods for both layers of our onion, thus the method is said to be
     an ONIOM QM:QM' method where QM stands for Quantum Mechanics, and the
@@ -207,7 +207,7 @@ permalink: research
 
     I don't want to go too far in depth on this one, but what is most valuable
     here, in my opinion, is the development of a systematic way of approaching
-    the modeling of these systems. The aim was to be very comprehensive, so as
+    the modelling of these systems. The aim was to be very comprehensive, so as
     to weigh and compare all of the factors which could determine the emission
     of light in these materials, or the absence thereof. By repeating this very
     broad and time-consuming analysis for all-in-all eleven molecules, Michael
@@ -249,7 +249,7 @@ permalink: research
     figures were very attractive, in order to not put off potential readers.
     This is an account of the program which compiles all of the tools developed
     during my PhD. **fromage** (FRamewOrk for Molecular AGgregate Excitations)
-    is a Python library designed to assist in modeling excited states in
+    is a Python library designed to assist in modelling excited states in
     molecular crystals. The need for it came about because, as discussed above,
     our perspective in this field encompasses molecules, clusters of molecules,
     and crystals, and these three orders of magnitude typically require
@@ -267,8 +267,8 @@ around
     - detect neighbouring pairs of molecules and measure their conformations
     - evaluate how much excited states involve neighbour molecules instead of
 just the one
-    - find how these excited states were shared between molecules calculate the
-    - excited states whilst taking into account their crystalline
+    - find how these excited states were shared between molecules
+    - calculate the excited states whilst taking into account their crystalline
         environment, as is described here: <a
         href="https://pubs.acs.org/doi/10.1021/acs.jctc.8b01180"><i>J. Chem.
         Theory Comput.</i> 2019, **15**, 2504-2516</a>
