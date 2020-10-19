@@ -7,7 +7,7 @@ permalink: work
 
 ## Introduction
 
-<p>I am a Computational Chemist, I write computer programs to model atoms and how they make up molecules and materials. I am interested in any project which involves programming, maths, and creativity, with benevolent ends.</p>
+<p>I am a Computational Chemist, I write computer programs to model atoms and how they make up molecules and materials. I am interested in any project which involves programming, maths, and creativity, with benevolent ends. You may find my doctoral thesis <a href="files/thesis.pdf">here</a>.</p>
 
 <p>If you would be interested in collaborating with me in a work capacity, please email me at <a href="mailto:m.rivera20@imperial.ac.uk">this address</a>. You can find my CV <a href="Miguel_Rivera_CV.pdf">here</a>.</p>
 
