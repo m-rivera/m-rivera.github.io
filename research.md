@@ -40,7 +40,7 @@ permalink: research
  hours and coffee pots in front of a computer, trying out different
  calculations.  Once you have narrowed down some nice candidate, you can send
  over the recipe to some experimental chemists, who can actually build the
- thing, end hopefully build some new material.
+ thing, and hopefully build some new material.
 
  My role in this picture is to write the programs which model the crystals in
  question. I design the mathematical tools to model the quantum physics of

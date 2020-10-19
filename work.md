@@ -9,12 +9,12 @@ permalink: work
 
 <p>I am a Computational Chemist, I write computer programs to model atoms and how they make up molecules and materials. I am interested in any project which involves programming, maths, and creativity, with benevolent ends.</p>
 
-<p>If you would be interested in collaborating with me in a work capacity, please email me at <a href="mailto:m.rivera@qmul.ac.uk">this address</a>. You can find my CV <a href="Miguel_Rivera_CV.pdf">here</a>.</p>
+<p>If you would be interested in collaborating with me in a work capacity, please email me at <a href="mailto:m.rivera20@imperial.ac.uk">this address</a>. You can find my CV <a href="Miguel_Rivera_CV.pdf">here</a>.</p>
 
 ## Professional History
 
 <ul>
-    <li><b>Research Assistant</b>, Imperial College London, 04/2020 - <br/>
+    <li><b>Research Associate</b>, Imperial College London, 04/2020 - <br/>
     I work in the Materials Design group, with Aron Walsh. The <a href="http://wmd-group.github.io/">group</a> has a variety of interests, and I focus on software development for several applications. We work in the Department of Materials, at Imperial College London, in South Kensington, London, UK.</li>
      <li><b>Doctoral Researcher</b>, Queen Mary University of London, 10/2016 - 03/2020<br/>
     I develop modelling strategies which allow the simulation of materials which interact with light. I then implement these strategies in <a href="https://github.com/m-rivera">open source programs</a> which enable the design of new better materials for solar panels, lasers, and LEDs. My advisor is Dr Rachel Crespo-Otero, and <a href="https://crespootero.wordpress.com/">our group</a> is located at Queen Mary University of London (QMUL), UK.</li>
@@ -27,7 +27,7 @@ permalink: work
 ## Education
 
 <ul>
-    <li><b>PhD in Computational Chemistry</b>, Queen Mary University of London, UK, 10/2016 -</li>
+    <li><b>PhD in Computational Chemistry</b>, Queen Mary University of London, UK, 10/2016 - 04/2020</li>
     <li><b>MSci in Physics</b>, University College London, UK, 10/2012 - 05/2016</li>
     <li><b>French Baccalaureate with International Option in English</b>, Lycée International des Pontonniers, Strasbourg, France, 09/2009 - 07/2012</li>
 </ul>
