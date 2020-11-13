@@ -14304,15 +14304,20 @@ a.anchor-link {
 <p>$E_d^{H_2} = 2 E($H·)$ - E($H$_2)$</p>
 <p>To begin with, we need the energy of the reactant. In the Born-Oppenheimer approximation, we know that the energy of the molecule depends <strong>parametrically</strong> on the nuclear positions. This means that for any given atomic coordinates supplied to the program, we will receive one corresponding energy.</p>
 <p>To give ASE a geometry, we must first import the relevant ASE module, the <code>Atoms</code> class:</p>
-<blockquote><p>```python
-from ase import Atoms</p>
+<blockquote><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ase</span> <span class="kn">import</span> <span class="n">Atoms</span>
+</pre></div>
 </blockquote>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <div class="alert alert-success"> <b>I.a. Import the <span style='font-family:monospace;'>Atoms</span> class in the cell below.</b></div>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[28]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">ase</span> <span class="kn">import</span> <span class="n">Atoms</span>
@@ -14335,7 +14340,7 @@ from ase import Atoms</p>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[24]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[29]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">molecule</span> <span class="o">=</span> <span class="n">Atoms</span><span class="p">([</span><span class="s1">&#39;H&#39;</span><span class="p">,</span><span class="s1">&#39;H&#39;</span><span class="p">],[[</span><span class="mf">0.</span><span class="p">,</span><span class="mf">0.</span><span class="p">,</span><span class="mf">0.</span><span class="p">],[</span><span class="mf">0.74</span><span class="p">,</span><span class="mf">0.</span><span class="p">,</span><span class="mf">0.</span><span class="p">]])</span>
@@ -14360,10 +14365,15 @@ from ase import Atoms</p>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>And write the code to save the image and visualise it:</p>
-<blockquote><p>```python
-from ase.visualize import view
-view(molecule, viewer='x3d')</p>
+<blockquote><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ase.visualize</span> <span class="kn">import</span> <span class="n">view</span>
+<span class="n">view</span><span class="p">(</span><span class="n">molecule</span><span class="p">,</span> <span class="n">viewer</span><span class="o">=</span><span class="s1">&#39;x3d&#39;</span><span class="p">)</span>
+</pre></div>
 </blockquote>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <div class="alert alert-success"> <b>I.c. Use the code blocks above to visualise our molecule.</b></div>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
@@ -14510,9 +14520,14 @@ The combination of the method and basis set is called the <em>level of theory</e
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>We are now ready to set up our calculation! Here is a subtelty: ASE itself does not normally perform the energy calculations. In fact, there are dozens of programs out there, designed to calculate the energy for a given geometry, all with different desirable features. The purpose of ASE is to be able to use any of those programs in the same way, so as not to have to learn how to use each and every one.</p>
 <p>We do this by means of objects called "calculators". We are now going to set up a calculator for the electronic structure program Psi4. First, we import our calculator:</p>
-<blockquote><p>```python
-from ase.calculators.psi4 import Psi4</p>
+<blockquote><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ase.calculators.psi4</span> <span class="kn">import</span> <span class="n">Psi4</span>
+</pre></div>
 </blockquote>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <div class="alert alert-success"> <b>I.e. Import the <span style='font-family:monospace;'>Psi4</span> calculator class.</b></div>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
@@ -14533,9 +14548,14 @@ from ase.calculators.psi4 import Psi4</p>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>Now, create a <code>Psi4</code> object with the desired method and basis set combination:</p>
-<blockquote><p>```python
-calculation = Psi4(method = 'hf', basis = 'STO-3G', multiplicity = 1)</p>
+<blockquote><div class="highlight"><pre><span></span><span class="n">calculation</span> <span class="o">=</span> <span class="n">Psi4</span><span class="p">(</span><span class="n">method</span> <span class="o">=</span> <span class="s1">&#39;hf&#39;</span><span class="p">,</span> <span class="n">basis</span> <span class="o">=</span> <span class="s1">&#39;STO-3G&#39;</span><span class="p">,</span> <span class="n">multiplicity</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
+</pre></div>
 </blockquote>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <div class="alert alert-success"> <b>I.f. Create a <span style='font-family:monospace;'>Psi4</span> calculator object for a Hartree-Fock/STO-3G level of theory.</b></div>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
@@ -14567,11 +14587,16 @@ calculation = Psi4(method = 'hf', basis = 'STO-3G', multiplicity = 1)</p>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="3.-Running-the-calculation">3. Running the calculation<a class="anchor-link" href="#3.-Running-the-calculation">&#182;</a></h2><p>We are now ready to perform the electronic structure calculation! We can assign our calculation parameters to our <code>Atoms</code> object, and ask for an energy:</p>
-<blockquote><p>```python
-molecule.calc = calculation
-energy = molecule.get_potential_energy()
-print(energy)</p>
+<blockquote><div class="highlight"><pre><span></span><span class="n">molecule</span><span class="o">.</span><span class="n">calc</span> <span class="o">=</span> <span class="n">calculation</span>
+<span class="n">energy</span> <span class="o">=</span> <span class="n">molecule</span><span class="o">.</span><span class="n">get_potential_energy</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">energy</span><span class="p">)</span>
+</pre></div>
 </blockquote>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <div class="alert alert-success"> <b>I.g. Calculate the potential energy of H<sub>2</sub> with a bond length of 0.74144 Å, at the HF/STO-3G level of theory.</b></div>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
@@ -14627,16 +14652,21 @@ print(energy)</p>
 <li>I run the calculation.</li>
 </ol>
 <p>I have also added <code>_h</code> at the end of all of our variable names to differentiate them.</p>
-<blockquote><p>```python
-molecule_h = Atoms(['H'],[[0.,0.,0.]]) # prepare geometry
-calculation_h = Psi4(method = 'hf', 
-                    basis = 'STO-3G',
-                    multiplicity = 2,
-                    reference = 'uhf') # set up calculation
-molecule_h.calc = calculation_h
-energy_h = molecule_h.get_potential_energy() # run calculation
-print(energy_h) # get results</p>
+<blockquote><div class="highlight"><pre><span></span><span class="n">molecule_h</span> <span class="o">=</span> <span class="n">Atoms</span><span class="p">([</span><span class="s1">&#39;H&#39;</span><span class="p">],[[</span><span class="mf">0.</span><span class="p">,</span><span class="mf">0.</span><span class="p">,</span><span class="mf">0.</span><span class="p">]])</span> <span class="c1"># prepare geometry</span>
+<span class="n">calculation_h</span> <span class="o">=</span> <span class="n">Psi4</span><span class="p">(</span><span class="n">method</span> <span class="o">=</span> <span class="s1">&#39;hf&#39;</span><span class="p">,</span> 
+                    <span class="n">basis</span> <span class="o">=</span> <span class="s1">&#39;STO-3G&#39;</span><span class="p">,</span>
+                    <span class="n">multiplicity</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span>
+                    <span class="n">reference</span> <span class="o">=</span> <span class="s1">&#39;uhf&#39;</span><span class="p">)</span> <span class="c1"># set up calculation</span>
+<span class="n">molecule_h</span><span class="o">.</span><span class="n">calc</span> <span class="o">=</span> <span class="n">calculation_h</span>
+<span class="n">energy_h</span> <span class="o">=</span> <span class="n">molecule_h</span><span class="o">.</span><span class="n">get_potential_energy</span><span class="p">()</span> <span class="c1"># run calculation</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">energy_h</span><span class="p">)</span> <span class="c1"># get results</span>
+</pre></div>
 </blockquote>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <div class="alert alert-success"> <b>I.h. Calculate the potential energy of H· at the HF/STO-3G level of theory.</b></div>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
