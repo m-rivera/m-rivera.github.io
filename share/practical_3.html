@@ -18,10 +18,47 @@
   <![endif]-->
 </head>
 <body>
-<h1 id="molecular-quantum-chemistry-practical-3-chem0025-2021">Molecular Quantum Chemistry <strong>Practical 3 CHEM0025 2021</strong></h1>
+<h1 id="molecular-quantum-chemistry-practical-3-chem0025-2021">Molecular Quantum Chemistry: Practical 3 CHEM0025 2021</h1>
 <p>Prof Ben Slater (b.slater@ucl.ac.uk), Prof Graham Worth (g.a.worth@ucl.ac.uk), Dr Miguel Rivera (miguel.rivera@ucl.ac.uk)</p>
-<h2 id="introduction">Introduction</h2>
-<h3 id="background">Background</h3>
+<h2 id="table-of-contents">Table of contents</h2>
+<ul>
+<li><a href="#webmo-basics">WebMO basics</a>
+<ul>
+<li><a href="#1-introduction">1. Introduction</a>
+<ul>
+<li><a href="#11-background">1.1 Background</a></li>
+<li><a href="#12-assessment">1.2 Assessment</a></li>
+<li><a href="#13-assistance">1.3 Assistance</a></li>
+</ul></li>
+<li><a href="#2-getting-started">2. Getting started</a>
+<ul>
+<li><a href="#21-programs">2.1 Programs</a></li>
+<li><a href="#22-how-to-access">2.2 How to access</a></li>
+</ul></li>
+<li><a href="#3-tutorial">3. Tutorial</a>
+<ul>
+<li><a href="#31-building-a-molecule">3.1 Building a molecule</a></li>
+<li><a href="#32-setting-up-the-calculation">3.2 Setting up the calculation</a></li>
+<li><a href="#33-brief-aside-about-the-input-file">3.3 Brief aside about the input file</a></li>
+<li><a href="#34-reading-the-output">3.4 Reading the output</a></li>
+<li><a href="#35-types-of-calculations">3.5 Types of calculations</a></li>
+<li><a href="#36-another-example">3.6 Another example</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#questions">Questions</a>
+<ul>
+<li><a href="#1-modelling-reactions-and-barriers-of-gas-phase-molecules">1. Modelling reactions and barriers of gas phase molecules</a>
+<ul>
+<li><a href="#11-things-to-remember">1.1 Things to remember</a></li>
+<li><a href="#12-background">1.2 Background</a></li>
+<li><a href="#13-calculations">1.3 Calculations</a></li>
+</ul></li>
+<li><a href="#2-exploring-the-potential-energy-surface-and-visualising-results">2. Exploring the potential energy surface and visualising results</a></li>
+</ul></li>
+</ul>
+<h1 id="webmo-basics">WebMO basics</h1>
+<h2 id="introduction">1. Introduction</h2>
+<h3 id="background">1.1 Background</h3>
 <p>In this module you will learn how to use quantum chemistry computer software to get insight into the reactions of simple molecules. You will mainly use <strong>density functional theory</strong> (DFT) in your work, now the most commonly used quantum mechanical approach for routine modelling of isolated molecules, liquids and crystals. It is not important to understand the detailed mathematics behind the theory of DFT, but you should familiarise yourself with the basic tenets of this approach – students who have opted to do CHEM0028 will have already encountered DFT and key parts of the course are on the Moodle page. Suggested reading is given at the end of lab book.</p>
 <p>In this module you will:</p>
 <ul>
@@ -30,19 +67,19 @@
 <li>Use a visualiser to help interpret the output from the calculations Write up</li>
 <li>your computational research in a report</li>
 </ul>
-<h3 id="assessment">Assessment</h3>
+<h3 id="assessment">1.2 Assessment</h3>
 <p>The module will be assessed by two written reports worth 50% each, <strong>[CONSULT WITH BEN AND GRAHAM]</strong></p>
 <p>Please write a word processed report giving answers to the questions given at the end of this document. Give the <strong>total energies</strong> for each of the structures in your calculations and the <strong>associated filename</strong>. Please present your data in a clear manner giving appropriate labels and units. In many cases, quoting the relative energy is more instructive than the absolute energies, so present that where it is meaningful. The computer you will be using for your calculations is <strong>not backed up</strong>. I advise copying your important input and output data to your account under Desktop@UCL and/or backing up your data on your home computer. The latter can be done using ‘sftp’ – please speak to me if you want to know how to do this.</p>
-<h3 id="assistance">Assistance</h3>
+<h3 id="assistance">1.3 Assistance</h3>
 <p>Do try and solve the problem yourself first. If your problem is about <strong>WebMO</strong>, the answer may be in the (documentation)[https://webmo.chem.ucl.ac.uk/~webmo//help/Contents.html]. If you are stuck, ask for help on Moodle, or from one of the instructors by email at b.slater@ucl.ac.uk, g.a.worth@ucl.ac.uk or miguel.rivera@ucl.ac.uk.</p>
-<h2 id="getting-started">Getting Started</h2>
-<h3 id="programs">Programs</h3>
+<h2 id="getting-started">2. Getting started</h2>
+<h3 id="programs">2.1 Programs</h3>
 <p>You will be using a “UNIX” (unix is a ubiquitous computer operating system) based computer called <strong>NTC</strong> (New Teaching Cluster) to carry out your calculations, which you can use with Desktop@UCL or with the UCL VPN on your home machine. Once you have set up your account, you will use several pieces of software to actually run calculations:</p>
 <ol type="1">
 <li><strong>WebMO</strong> to build molecules, generate input and analyse output for…</li>
 <li><strong>NWChem</strong> (<a href="https://nwchemgit.github.io/Home.html" class="uri">https://nwchemgit.github.io/Home.html</a>). This manual is vast and 95% of it is irrelevant for this module, but it may be useful to consult if you are unsure about input commands.</li>
 </ol>
-<h3 id="how-to-access">How To Access</h3>
+<h3 id="how-to-access">2.2 How to access</h3>
 <ol type="1">
 <li>Start your VPN or log in to Desktop@UCL.</li>
 <li>Open an internet browser (Firefox, Chrome, Edge, etc.).</li>
@@ -50,8 +87,8 @@
 <li>Log in with your UCL username and your NTC password (which could be different from. your main UCL one!).</li>
 </ol>
 <p>You should be in.</p>
-<h3 id="launching-and-analysing-calculations">Launching and Analysing Calculations</h3>
-<h4 id="building-a-molecule">Building a Molecule</h4>
+<h2 id="tutorial">3. Tutorial</h2>
+<h3 id="building-a-molecule">3.1 Building a molecule</h3>
 <p>As a first example, we will study carbon monoxide using <strong>WebMO</strong>.</p>
 <ol type="1">
 <li>In the top bar, click <strong>New Job</strong> → <strong>Create New Job</strong> within WebMO. A blank screen appears in which you can build molecules. When you make mistakes on this page, the left hand bar has an undo button to help (<img src="undo.png" width="30">).</li>
@@ -64,8 +101,9 @@
 <li>Because the electronic structure of carbon monoxide is not straight-forward, WebMO has added a hydrogen. To remove it, use the adjust tool to select it (<img src="adjust.png" width="30">) and press the “backspace” key to delete it.</li>
 <li>We wish to further adjust the C-O bond length. In the top bar, click <strong>Adjust</strong> → <strong>Bond length</strong>, and type in 1.2 (the units are in Angstroms, i.e. <span class="math inline">\(10^{10}\)</span> m), then click “OK”.</li>
 </ol>
-<p>The molecule looks ready for calculation.</p>
-<h4 id="setting-up-the-calculation">Setting Up the Calculation</h4>
+<p>The molecule looks ready for calculation:</p>
+<p><img src="co.png" width="600"></p>
+<h3 id="setting-up-the-calculation">3.2 Setting up the calculation</h3>
 <ol type="1">
 <li>Click on the right arrow in the bottom right (<img src="rarrow.png" width="30">).</li>
 <li>You will be faced with a menu to choose which engine you want to use to calculate your properties. It should look like this:</li>
@@ -87,10 +125,126 @@
 <ol start="7" type="1">
 <li>Click on the right arrow again. You will be asked whether you want to submit the input file. Press “OK”</li>
 </ol>
-<p>You have now asked the computer cluster to optimise the geometry of the CO molecule.</p>
-<h4 id="brief-aside-about-the-input-file">Brief Aside About the Input File</h4>
-<p>The input file can be a little cryptic, here is a partial explanation:</p>
-<p><img src="nw_input.png" width="500"></p>
+<p>You have now asked the computer cluster to optimise the geometry of the CO molecule. You should be sent back to the Job Manager page.</p>
+<h3 id="brief-aside-about-the-input-file">3.3 Brief aside about the input file</h3>
+<p>The input file can be a little cryptic, here it is with added annotations (marked by “#” signs):</p>
+<pre><code>title &quot;CO&quot;
+
+echo
+
+charge 0                                 # Charge on the molecule
+
+geometry
+C 0.00000000 0.00000000 0.00000000       # Atom type and Cartesian coordinates
+O -1.12166866 -0.36820353 -0.21514083
+end
+
+basis noprint
+ * library 6-311++G**                    # Basis set type
+end
+
+dft
+ XC b3lyp # DFT recipe
+ mult 1                                  # Spin state
+end
+task dft optimize                        # Calculation instructions
+task dft energy
+
+property
+  dipole
+  mulliken
+end
+task dft property
+</code></pre>
 <p>You may have to tinker with this later.</p>
+<h3 id="reading-the-output">3.4 Reading the output</h3>
+<p>After a short wait, you should see your job labeled as having a “Complete” status in the Job Manager. You can inspect the results by pressing the magnifying glass next to it (<img src="mag.png" width="30">). The screen should appear the same as when you built the molecule, and you will be able to find plenty of information which will let you:</p>
+<ul>
+<li>Measure <strong>bond lengths, bond angles, and dihedral angles</strong> using the adjust tool (<img src="adjust.png" width="30">).</li>
+<li>Read a summary of the <strong>principal calculated data</strong>, including total energy and dipole moment, if you scroll down.</li>
+<li>Visualise <strong>volumetric data</strong>, such as the molecular orbitals, charge density or electrostatic potential, using <strong>Calculate</strong> → <strong>Huckel</strong>, and picking an option.</li>
+<li>Get the <strong>full output</strong> from NWChem if you click on “All files”, on the very left (<img src="files.png" width="50">). You should see a list of files relating to your calculation (in fact your input file is the one called <code>input.inp</code>). The full output is called <code>output.out</code>. It is long and full of superfluous detail, but for instance you can get the total energy at each step of the calculation by looking for the words “Total DFT energy” (the equilibrium energy is the final one).</li>
+</ul>
+<p><strong>Note:</strong> Since you are back in the “Build Molecule” menu, if you wish to carry out a new calculation starting with this molecular geometry, you can follow the steps of the previous section by clicking the bottom right arrow.</p>
+<h3 id="types-of-calculations">3.5 Types of calculations</h3>
+<p>NWChem is a very powerful piece of software—we shall use only a small fraction of its functionality. Here is a summary of the types of calculations you will carry out:</p>
+<ul>
+<li><code>task dft energy</code> : this instructs NWchem to evaluate the total energy of the moiety according to the DFT prescription.</li>
+<li><code>task dft optimize</code> : this instructs NWchem to minimize the total energy of the moiety by adjusting the coordinates of the atoms within the moiety.</li>
+<li><code>task dft frequency</code> : this instructs NWChem to evaluate the vibrational frequencies (for direct comparison with experimental e.g. IR spectra) of the moiety. This is quite a computationally expensive calculation often conducted when the optimum structure has been identified.</li>
+<li><code>task dft saddle</code> : this instructs NWchem to identify the closet stationary point on the potential energy surface by adjusting the coordinates of the atoms within the moiety.</li>
+</ul>
+<h3 id="another-example">3.6 Another example</h3>
+<p>As a second example, we will investigate the water molecule. To calculate the energy at an arbitrary energy, we may use the following input file (remember that the comments after the “#” sign are ignored by NWChem):</p>
+<pre><code>geometry units angstrom
+ O 0.0 0.0 0.0      # Here, O is the element label, 0.0 0.0 0.0 are the
+ H 0.0 1.0 0.0      # coordinates with respect to an arbirary origin.
+ H 0.0 0.0 1.0      # Note the orientation of the molecule doesn&#39;t matter.
+end
+
+basis
+ O library 6-311++G**  # Basis set
+ H library 6-311++G**
+end
+
+dft
+ xc b3lyp              # DFT recipe
+end
+
+print low              # Print out only essential information
+
+task dft energy        # Type of calculation</code></pre>
+<p>Run this calculation through WebMO (you will most likely have to edit the input file). Once it is finished, mark down the total energy, it should be near -76.45 Hartree. You have just calculated the energy of a water molecule, a so-called <em>single point</em> energy because it is the total energy of a moiety at one particular conformation.</p>
+<p>The guess of the water structure in the input file was pretty poor. The H-O-H angle was estimated to be 90°, and so we expect this structure to be relatively high in energy. We now need to determine what the minimum energy structure is for our simulation settings. To do this we need to ‘geometry optimise’ the structure. In geometry optimisation, the package tries to minimise the force on all atoms in the molecule, (which is the derivative of the total energy with respect to the coordinates). The program goes through an iterative <strong>minimisation</strong> procedure to reduce the force on all atoms to approximately zero.</p>
+<p>To optimise the geometry, change the line <code>task dft energy</code> to <code>task dft optimize</code> in your input file, and rerun the calculation. When inspecting the output, you should see an H-O-H angle of about 105° and an energy nearer to -76.46 Hartree. The water molecule has therefore stabilised by 18.52 kJ mol<span class="math inline">\(^{-1}\)</span>.</p>
+<h1 id="questions">Questions</h1>
+<h2 id="modelling-reactions-and-barriers-of-gas-phase-molecules">1. Modelling reactions and barriers of gas phase molecules</h2>
+<p>Due <strong>[DISCUSS WITH BEN AND GRAHAM]</strong></p>
+<h3 id="things-to-remember">1.1 Things to remember</h3>
+<p><strong>Unless otherwise stated, use the DFT recipe and basis set in the first example input. That is B3LYP/6-311G++(d,p).</strong></p>
+<p>Note that all energies in NWChem are in units of Hartrees. Please convert these energies to kJ mol<span class="math inline">\(^{-1}\)</span> in your report by multiplying your energies by 2625.5.</p>
+<p><strong>Watch out for in your input. It is easy to get zero and the letter O mixed up, similarly the number one and the letter l. To make sure that NWChem has run to completion without error, check the bottom of the output file, you should see a list of authors.</strong></p>
+<p>Unless otherwise stated, no starting geometries are suggested for these calculations below. Use your chemical intuition, web resources (<a href="https://wok.mimas.ac.uk/">wok.mimas.ac.uk</a>–which requires your UCL ID and password and even trigonometry to set up starting geometries for your models. Whenever possible, use the <strong>cleanup tool</strong> before optimising geometries, you will save everyone a lot of time.</p>
+<h3 id="background-1">1.2 Background</h3>
+<ol type="1">
+<li>Give an explanation in 200 words or less of the basic principles of DFT.</li>
+<li>Explain the meaning of a <em>basis set</em> in under 200 words and give two examples of basis set types.</li>
+<li>Explain the term <em>geometry optimisation</em> including a discussion of why a poor guess of the geometry of a compound might lead to a minimum energy structure but one which is not the true minimum.</li>
+<li>Describe the meaning of a <em>density functional</em> and comment on the difference in quality between an LDA, GGA, and hybrid functional calculation, explaining the meaning of these acronyms. In the calculations you undertake, you are using so-called <em>hybrid</em> function al known as B3LYP</li>
+<li>DFT fails to describe London dispersion forces correctly. Why do dispersion forces arise and will these forces be important in either chemisorption or physisorption on surfaces and why?</li>
+</ol>
+<h3 id="calculations">1.3 Calculations</h3>
+<ol start="6" type="1">
+<li><p>Calculate the bond length and total energy of spin polarised, paramagnetic O<span class="math inline">\(_2\)</span> (↑↑) and diamagnetic O<span class="math inline">\(_2\)</span> *(↑↓). Before the <code>task</code> command, you need to tell the program about the spin state you want with the keyword <code>mult</code>:</p>
+<pre><code>dft
+ mult 1 or 2 or 3 etc.
+end</code></pre>
+<p><code>mult</code> is the net spin of electrons in the system in terms of the integer numbers of electrons <em>plus one</em> ($2S+1).</p>
+<p>Note: You must also edit the input to break the symmetry of this molecule (which is automatically and used by NWChem to reduce computational expense), to prevent a bogus result, by adding the <code>symmetry c1</code> keyword as below:</p>
+<pre><code>geometry
+ O 0.0 0.0 0.0
+ ...
+ symmetry c1
+end</code></pre>
+<p>What is the predicted electronic ground state of O<span class="math inline">\(_2\)</span>? Is your predicted electronic state of Oxygen that which is found experimentally at room temperature and ambient pressure? Comment on the bond length you predicted in comparison to experiment.</p>
+<p>In these calculations, although you request a particular spin state, the program does not constrain the spin so check that the spin you requested has been preserved by looking for ‘S2’ at the end of the output, which is the total spin.</p>
+<p>You may find that the calculation finishes without identifying a minimum energy structure—this will be apparent from your output file as an errer will be reported. By default, NWChem has 20 attempts to identify the minimum energy structure. To increase the number of allowed attempts, insert the following into your input before the task directive which increases the number of attempts to 50:</p>
+<pre><code>driver
+ maxiter 50
+end</code></pre></li>
+<li>Now calculate the dissociation energy (<span class="math inline">\(D_e\)</span>) of molecular O<span class="math inline">\(_2\)</span> into monoatoms. i.e. What is the reaciton energy for:
+<p style="text-align: center;">
+O<span class="math inline">\(_{2(g)}\)</span> → 2O<span class="math inline">\(_{(g)}\)</span>
+</p>
+Think about the spin states again. Locate the experimental dissociation energy from the literature (e.g. the <em>CRC Handbook of Chemistry and Physics</em>) and comment on how well your calculation has reproduced the experimental energy.</li>
+<li><p>Calculate the equilibrium/optimised geometry for the water monomer andthen calculate the vibrational frequenceis of water. How many frequencies do you expected and why? Using the WebMO application to help you, sketch and report the vibrational modes associated with each of the non-zero frequencies. The experimentally determined water frequences from IR can be found <a href="https://webbook.nist.gov/cgi/cbook.cgi?ID=C7732185&amp;Type=IR-SPEC&amp;Index=1">here</a>.</p>
+<p>Your frequenceis are considerably larger than experiment—can you offer an explanation?</p>
+<p>In this calculation, you are using time independent DFT, within the Born-Oppenheimer approximation, so what is the effective temperature at which this calculation takes place?</p>
+<p>You will also find the zero point energy reported in this calculation. Report this quantity and show how one could arrive at this number using the frequencies reported in the output.</p></li>
+<li><p>Calculate and plot the inversion barrier height for water and ammonia. You will need to calculate the minimum energy structure and guess and optimise the transition state geometry using the <code>saddle</code> method you encountered earlier. Depending on your initial guess, you may find it efficient to minimise your initial guess and then use the <code>saddle</code> mode to confirm that you have obtained a stationary point. Saddle looks for maxima rather than minima on the potential energy surface. Explain how one could distinguish between the minimum energy structure and the stationary point by inspecting the vibrational frequencies.</p>
+<p>Are your frequencies consistent with a minimum and a stationary point? (Hint the vibrational frequencies are proportional to the second derivatives of the energy).</p>
+<p>Based on the energies you calculate and taking into account the thermal energy of gaseous molecules, at what temperatures would the barriers be overcome?</p></li>
+</ol>
+<h2 id="exploring-the-potential-energy-surface-and-visualising-results">2. Exploring the potential energy surface and visualising results</h2>
 </body>
 </html>
