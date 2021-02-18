@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>tutorial</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <link rel="stylesheet" href="gh.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS_CHTML-full" type="text/javascript"></script>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<h1 id="molecular-quantum-chemistry-practical-3-chem0025-2021-webmo-tutorial">Molecular Quantum Chemistry: Practical 3 CHEM0025 2021: WebMO Tutorial</h1>
+<p>Prof Ben Slater (b.slater@ucl.ac.uk), Prof Graham Worth (g.a.worth@ucl.ac.uk), Dr Miguel Rivera (miguel.rivera@ucl.ac.uk)</p>
+<h2 id="table-of-contents">Table of contents</h2>
+<ul>
+<li><a href="#introduction">1. Introduction</a>
+<ul>
+<li><a href="#background">1.1 Background</a></li>
+<li><a href="#assessment">1.2 Assessment</a></li>
+<li><a href="#assistance">1.3 Assistance</a></li>
+</ul></li>
+<li><a href="#getting-started">2. Getting started</a>
+<ul>
+<li><a href="#programs">2.1 Programs</a></li>
+<li><a href="#how-to-access">2.2 How to access</a></li>
+</ul></li>
+<li><a href="#tutorial">3. Tutorial</a>
+<ul>
+<li><a href="#building-a-molecule">3.1 Building a molecule</a></li>
+<li><a href="#setting-up-the-calculation">3.2 Setting up the calculation</a></li>
+<li><a href="#brief-aside-about-the-input-file">3.3 Brief aside about the input file</a></li>
+<li><a href="#reading-the-output">3.4 Reading the output</a></li>
+<li><a href="#types-of-calculations">3.5 Types of calculations</a></li>
+<li><a href="#another-example">3.6 Another example</a></li>
+</ul></li>
+</ul>
+<h2 id="introduction">1. Introduction</h2>
+<h3 id="background">1.1. Background</h3>
+<p>In this module you will learn how to use quantum chemistry computer software to get insight into the reactions of simple molecules. You will mainly use <strong>density functional theory</strong> (DFT) in your work, now the most commonly used quantum mechanical approach for routine modelling of isolated molecules, liquids and crystals. It is not important to understand the detailed mathematics behind the theory of DFT, but you should familiarise yourself with the basic tenets of this approach – students who have opted to do CHEM0028 will have already encountered DFT and key parts of the course are on the Moodle page. Suggested reading is given at the end of lab book.</p>
+<p>In this module you will:</p>
+<ul>
+<li>Setup and run calculations in the UNIX computing environment Learn how to</li>
+<li>calculate properties of molecules, such as reaction enthalpies and barriers from simulations</li>
+<li>Use a visualiser to help interpret the output from the calculations Write up</li>
+<li>your computational research in a report</li>
+</ul>
+<h3 id="assessment">1.2. Assessment</h3>
+<p>The module will be assessed in two parts: - Assessment 1 is a quiz which you can find on Moodle, worth 33.3% of the total mark. - Assessment 2 is a report to be submitted on Moodle, detailing the procedure and results for a series of computational investigations. It is worth 66.7%.</p>
+<p>The deadline for both of these assessments is <strong>23:59 on Monday the 29th of March</strong>.</p>
+<h3 id="assistance">1.3. Assistance</h3>
+<p>Do try and solve the problem yourself first. If your problem is about <strong>WebMO</strong>, the answer may be in the <a href="https://webmo.chem.ucl.ac.uk/~webmo//help/Contents.html">documentation</a>. If you are stuck, ask for help on Moodle, or from one of the instructors by email at b.slater@ucl.ac.uk, g.a.worth@ucl.ac.uk or miguel.rivera@ucl.ac.uk.</p>
+<p>Additionally, support sessions will be held on Mondays and Thursdays from 11:00 to 13:00, starting on Monday the 22nd of February and ending on Thursday the 25th of March.</p>
+<h2 id="getting-started">2. Getting started</h2>
+<h3 id="programs">2.1. Programs</h3>
+<p>You will be using a “UNIX” (unix is a ubiquitous computer operating system) based computer called <strong>NTC</strong> (New Teaching Cluster) to carry out your calculations, which you can use with Desktop@UCL or with the UCL VPN on your home machine. Once you have set up your account, you will use several pieces of software to actually run calculations:</p>
+<ol type="1">
+<li><strong>WebMO</strong> to build molecules, generate input and analyse output for…</li>
+<li><strong>NWChem</strong> (<a href="https://nwchemgit.github.io/Home.html" class="uri">https://nwchemgit.github.io/Home.html</a>). This manual is vast and 95% of it is irrelevant for this module, but it may be useful to consult if you are unsure about input commands.</li>
+</ol>
+<h3 id="how-to-access">2.2. How to access</h3>
+<ol type="1">
+<li>Start your VPN or log in to Desktop@UCL.</li>
+<li>Open an internet browser (Firefox, Chrome, Edge, etc.).</li>
+<li>Visit <a href="https://webmo.chem.ucl.ac.uk" class="uri">https://webmo.chem.ucl.ac.uk</a></li>
+<li>Log in with your UCL username and your NTC password (which could be different from. your main UCL one!).</li>
+</ol>
+<p>You should be in.</p>
+<h2 id="tutorial">3. Tutorial</h2>
+<h3 id="building-a-molecule">3.1. Building a molecule</h3>
+<p>As a first example, we will study carbon monoxide using <strong>WebMO</strong>.</p>
+<ol type="1">
+<li>In the top bar, click <strong>New Job</strong> → <strong>Create New Job</strong> within WebMO. A blank screen appears in which you can build molecules. When you make mistakes on this page, the left hand bar has an undo button to help (<img src="undo.png" alt="undo" width="30" />).</li>
+<li>Click in the blank screen and by default a single carbon atom appears.</li>
+<li>To add an oxygen atom, click on the periodic table on the left bar (<img src="per.png" alt="periodic" width="30" />) and select Oxygen.</li>
+<li>Click on the carbon atom and drag where you want the oxygen to appear. A stick will be connecting them to represent the bond. Repeat this step to change the bond to a double, and finally a triple bond. Otherwise, after step 3, you may click instead of dragging, for a non-bonded atom.</li>
+<li>To check the separation between the atoms, first click on the adjust tool in the left bar (<img src="adjust.png" alt="adjust" width="30" />).</li>
+<li>Click on the Carbon atom, then the Oxygen atom. A sphere should appear around each of them.</li>
+<li>Cleanup your structuree with the cleanup tool in the left bar (<img src="clean.png" alt="clean" width="30" />). This will add any hydrogens missing from our structure using VSPER theory. <strong>Note: this is not yet DFT</strong>.</li>
+<li>Because the electronic structure of carbon monoxide is not straight-forward, WebMO has added a hydrogen. To remove it, use the adjust tool to select it (<img src="adjust.png" alt="adjust" width="30" />) and press the “backspace” key to delete it.</li>
+<li>We wish to further adjust the C-O bond length. In the top bar, click <strong>Adjust</strong> → <strong>Bond length</strong>, and type in 1.2 (the units are in Angstroms, i.e. <span class="math inline">\(10^{10}\)</span> m), then click “OK”.</li>
+</ol>
+<p>The molecule looks ready for calculation:</p>
+<p><img src="co.png" width="600" /><br />
+</p>
+<h3 id="setting-up-the-calculation">3.2. Setting up the calculation</h3>
+<ol type="1">
+<li>Click on the right arrow in the bottom right (<img src="rarrow.png" alt="rarrow" width="30" />).</li>
+<li>You will be faced with a menu to choose which engine you want to use to calculate your properties. For this tutorial we will be using NWChem, but the options in Gaussian are very similar. It should look like this:</li>
+</ol>
+<p><img src="eng.png" alt="engeng" width="400" /><br />
+</p>
+<ol start="3" type="1">
+<li>Click on the right arrow again.</li>
+<li>You should be faced with the Job Options menu. Change the <strong>Job Name</strong> to something meaningful like <em>your_name_CO</em>. Change the <strong>Calculation</strong> to <em>Geometry Optimization</em>, the <strong>Theory</strong> to <em>DFT</em>, the <strong>DFT Functional</strong> to <em>B3LYP</em>, and the <strong>Basis Set</strong> to <em>6-311++G(d,p)</em>. It should look like this:</li>
+</ol>
+<p><img src="opt.png" alt="opt" width="400" /><br />
+</p>
+<ol start="5" type="1">
+<li>Click on the <strong>Advanced</strong> tab, and tick the <strong>Cartesian Coordinates</strong> box. It should look like this:</li>
+</ol>
+<p><img src="adv.png" alt="adv" width="400" /><br />
+</p>
+<ol start="6" type="1">
+<li>Click on the <strong>Preview</strong> tab and click on <strong>Generate</strong> at the bottom of the page, to look at the generated input file. This contains all of the relevant information that you have picked up to now, from the atomic positions to the basis set (details in the next section). You can edit and ovewrite options here, it is the final step before sending it to the program:</li>
+</ol>
+<p><img src="input.png" alt="input" width="400" /><br />
+</p>
+<ol start="7" type="1">
+<li>Click on the right arrow again. You will be asked whether you want to submit the input file. Press “OK”</li>
+</ol>
+<p>You have now asked the computer cluster to optimise the geometry of the CO molecule. You should be sent back to the Job Manager page.</p>
+<h3 id="brief-aside-about-the-input-file">3.3. Brief aside about the input file</h3>
+<p>The input file can be a little cryptic, here it is with added annotations (marked by “#” signs):</p>
+<pre><code>title &quot;CO&quot;
+
+echo
+
+charge 0                                 # Charge on the molecule
+
+geometry
+C 0.00000000 0.00000000 0.00000000       # Atom type and Cartesian coordinates
+O -1.12166866 -0.36820353 -0.21514083
+end
+
+basis noprint
+ * library 6-311++G**                    # Basis set type
+end
+
+dft
+ XC b3lyp # DFT recipe
+ mult 1                                  # Spin state
+end
+task dft optimize                        # Calculation instructions
+task dft energy
+
+property
+  dipole
+  mulliken
+end
+task dft property
+</code></pre>
+<p>You may have to tinker with this later.</p>
+<h3 id="reading-the-output">3.4. Reading the output</h3>
+<p>After a short wait, you should see your job labeled as having a “Complete” status in the Job Manager. You can inspect the results by pressing the magnifying glass next to it (<img src="mag.png" alt="mag" width="30" />). The screen should appear the same as when you built the molecule, and you will be able to find plenty of information which will let you:</p>
+<ul>
+<li>Measure <strong>bond lengths, bond angles, and dihedral angles</strong> using the adjust tool (<img src="adjust.png" alt="adjust" width="30" />).</li>
+<li>Read a summary of the <strong>principal calculated data</strong>, including total energy and dipole moment, if you scroll down.</li>
+<li>Visualise <strong>volumetric data</strong>, such as the molecular orbitals, charge density or electrostatic potential, using <strong>Calculate</strong> → <strong>Huckel</strong>, and picking an option.</li>
+<li>Get the <strong>full output</strong> from NWChem if you click on “All files”, on the very left (<img src="files.png" alt="files" width="50" />). You should see a list of files relating to your calculation (in fact your input file is the one called <code>input.inp</code>). The full output is called <code>output.out</code>. It is long and full of superfluous detail, but for instance you can get the total energy at each step of the calculation by looking for the words “Total DFT energy” (the equilibrium energy is the final one).</li>
+</ul>
+<p><strong>Note:</strong> Since you are back in the “Build Molecule” menu, if you wish to carry out a new calculation starting with this molecular geometry, you can follow the steps of the previous section by clicking the bottom right arrow.</p>
+<h3 id="types-of-calculations">3.5. Types of calculations</h3>
+<p>NWChem is a very powerful piece of software—we shall use only a small fraction of its functionality. Here is a summary of the types of calculations you will carry out:</p>
+<ul>
+<li><code>task dft energy</code> : this instructs NWchem to evaluate the total energy of the moiety according to the DFT prescription.</li>
+<li><code>task dft optimize</code> : this instructs NWchem to minimize the total energy of the moiety by adjusting the coordinates of the atoms within the moiety.</li>
+<li><code>task dft frequency</code> : this instructs NWChem to evaluate the vibrational frequencies (for direct comparison with experimental e.g. IR spectra) of the moiety. This is quite a computationally expensive calculation often conducted when the optimum structure has been identified.</li>
+<li><code>task dft saddle</code> : this instructs NWchem to identify the closet stationary point on the potential energy surface by adjusting the coordinates of the atoms within the moiety.</li>
+</ul>
+<h3 id="another-example">3.6. Another example</h3>
+<p>As a second example, we will investigate the water molecule. To calculate the energy at an arbitrary energy, we may use the following input file (remember that the comments after the “#” sign are ignored by NWChem):</p>
+<pre><code>geometry units angstrom
+ O 0.0 0.0 0.0      # Here, O is the element label, 0.0 0.0 0.0 are the
+ H 0.0 1.0 0.0      # coordinates with respect to an arbirary origin.
+ H 0.0 0.0 1.0      # Note the orientation of the molecule doesn&#39;t matter.
+end
+
+basis
+ O library 6-311++G**  # Basis set
+ H library 6-311++G**
+end
+
+dft
+ xc b3lyp              # DFT recipe
+end
+
+print low              # Print out only essential information
+
+task dft energy        # Type of calculation</code></pre>
+<p>Run this calculation through WebMO (you will most likely have to edit the input file). Once it is finished, mark down the total energy, it should be near -76.45 Hartree. You have just calculated the energy of a water molecule, a so-called <em>single point</em> energy because it is the total energy of a moiety at one particular conformation.</p>
+<p>The guess of the water structure in the input file was pretty poor. The H-O-H angle was estimated to be 90°, and so we expect this structure to be relatively high in energy. We now need to determine what the minimum energy structure is for our simulation settings. To do this we need to ‘geometry optimise’ the structure. In geometry optimisation, the package tries to minimise the force on all atoms in the molecule, (which is the derivative of the total energy with respect to the coordinates). The program goes through an iterative <strong>minimisation</strong> procedure to reduce the force on all atoms to approximately zero.</p>
+<p>To optimise the geometry, change the line <code>task dft energy</code> to <code>task dft optimize</code> in your input file, and rerun the calculation. When inspecting the output, you should see an H-O-H angle of about 105° and an energy nearer to -76.46 Hartree. The water molecule has therefore stabilised by 18.52 kJ mol<span class="math inline">\(^{-1}\)</span>.</p>
+<h3 id="reaction-coordinate-scans">3.7. Reaction coordinate scans</h3>
+<p>NWChem is debatably a very fast program, but for some applications, Gaussian is more robust.</p>
+<p>You will sometimes need to optimise a geometry whilst imposing some constraints. This comes in particularly useful if you are trying to probe the potential energy surface with a series of values for a bond length, bond angle, or dihedral angle. You then would like to make a series of geometry optimisations which force the coordinate to be of certain values.</p>
+<p>This is called a ‘relaxed scan’, relaxed because you are optimising all of the free coordinates at each step. Gaussian has a straight forward way of requesting a scan, however you will need to edit the input file.</p>
+<p>Here is an example: Let’s say that we want to see how the energy changes for a methane molecule, if we increase the tetrahedral angle H-C-H from 109.47° to 124.47° in steps of 5°. Additionally, for some reason, we care about one particluar C-H bond remaining frozen in length throughout.</p>
+<p>For the level of theory, Hartree-Fock, 6-31G(d), this would be the input file:</p>
+<pre><code>%NProcShared=2
+#N HF/6-31G(d) OPT(modredundant) Geom=Connectivity
+
+CH4
+
+0 1
+C 0.00000000 0.00000000 0.00000000
+H 1.09000000 0.00000000 0.00000000
+H -0.36333333 0.83908239 0.59332085
+H -0.36333333 0.09428973 -1.02332709
+H -0.36333333 -0.93337212 0.43000624
+
+1 2 1 3 1 4 1 5 1
+2 1 1
+3 1 1
+4 1 1
+5 1 1
+
+2 1 3 S 3 5.0
+1 2 F
+</code></pre>
+<p>Everything was generated by WebMO, much in the same way that one would for NWChem, except for two parts:</p>
+<ul>
+<li>In line 2, I have added the option <code>(modredundant)</code> to the keyword <code>OPT</code>, indicating that I will modify some redundant coordinates</li>
+<li>At the bottom, I have set two constraints.
+<ul>
+<li><code>2 1 3 S 3 5.0</code> says that I would like to scan (<code>S</code>) the reaction coordinate involving atoms 2, 1, and 3, (here, the angle between H, C, and H) in <code>3</code> increments of <code>5.0</code> degrees.</li>
+<li><code>1 2 F</code> says that I am freezing (<code>F</code>) the reaction coordinate involving atoms 1 and 2 (here, the bond length between C and H)</li>
+</ul></li>
+</ul>
+<p><strong>Warning</strong>: there is an obligatory blank line at the bottom of the input file.</p>
+<p>Finally, any time you define a coordinate by 2-4 atoms, the program will understand:</p>
+<ul>
+<li>2 atoms: bond length in Angstroms</li>
+<li>3 atoms: bond angle in degrees</li>
+<li>4 atoms: dihedral angle in degrees</li>
+</ul>
+<p>To analyse the output, scroll to the bottom of the page and play with the available options:</p>
+<p><img src="coord.png" alt="coord" width="300" /><br />
+</p>
+<p>You should be armed with everything you need to start performing calculations on WebMO. Do get in touch if you need any more help!</p>
+</body>
+</html>
