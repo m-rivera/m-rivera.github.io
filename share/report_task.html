@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>assessment_2_report</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <link rel="stylesheet" href="gh.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<h1 id="molecular-quantum-chemistry-practical-3-chem0025-2021-assessment-2">Molecular Quantum Chemistry: Practical 3 Chem0025 2021: Assessment 2</h1>
+<h2 id="table-of-contents">Table of contents</h2>
+<ul>
+<li><a href="#instructions">1. Instructions</a>
+<ul>
+<li><a href="#introduction">1.1. Introduction</a></li>
+<li><a href="#methods">1.2. Methods</a></li>
+<li><a href="#results">1.3. Results</a></li>
+</ul></li>
+<li><a href="#tasks">2. Tasks</a>
+<ul>
+<li><a href="#pyridine">2.1. Pyridine</a></li>
+<li><a href="#butadiene-and-ethene">2.2. Butadiene and ethene</a></li>
+<li><a href="#propene-and-hydrobromic-acid">2.3. Propene and hydrobromic acid</a></li>
+<li><a href="#cyclohexane-conformers">2.4. Cyclohexane conformers</a></li>
+</ul></li>
+</ul>
+<h2 id="instructions">1. Instructions</h2>
+<p>Below is a series of tasks involving performing and analysing calculations in order to gain some chemical insight. You must complete the tasks and submit a 2 to 3 page report based on them. The report must contain three main sections:</p>
+<h3 id="introduction">1.1. Introduction</h3>
+<p>Here, you will briefly comment on the possible uses for computational modelling in Chemistry and you will present the structure of your report.</p>
+<ul>
+<li><strong>10/100</strong>
+<ul>
+<li>5/10 for clarity and presentation</li>
+<li>5/10 for understanding the role of Computational Chemistry</li>
+</ul></li>
+</ul>
+<h3 id="methods">1.2. Methods</h3>
+<p>Here, you will detail <em>how</em> to carry out the work you’ve done. The detail should be enough to allow a classmate with no experience in Computational Chemistry to reproduce your results.</p>
+<ul>
+<li><strong>30/100</strong>
+<ul>
+<li>15/30 for clarity and presentation</li>
+<li>15/30 for completeness (did you cover each element of each calculation?)</li>
+</ul></li>
+</ul>
+<h3 id="results">1.3. Results</h3>
+<p>Here, you will report and discuss the results of each of the tasks.</p>
+<ul>
+<li><strong>50/100</strong> (10/100 for each of the first three taskts, double for the final one)
+<ul>
+<li>4/10 for clarity and presentation</li>
+<li>4/10 for linking the calculations with chemical knowledge</li>
+<li>2/10 for accuracy of the results</li>
+</ul></li>
+</ul>
+<p>A final <strong>10/100</strong> will be awarded for overall coherence of your report (consistent typesetting, transitions between sections etc.).</p>
+<h2 id="tasks">2. Tasks</h2>
+<p>For the first three calculations, use NWChem with the B3LYP functional and the basis set 3-21G. For 2.4., useGaussian with HF (Hartree-Fock) and the basis set 3-21G.</p>
+<h3 id="pyridine">2.1. Pyridine</h3>
+<p>Pyridine has three symmetrically unique carbon sites. Which of these sites would allow an electrophilic substitution, an which ones would allow a nucleophilic substitution?</p>
+<p>Base your answer on the distribution of charge around the molecule.</p>
+<h3 id="butadiene-and-ethene">2.2. Butadiene and ethene</h3>
+<p>Report the reaction energy for the Diels-Adler reaction between butadiene and ethene, producing cyclohexene.</p>
+<p>Is this reaction allowed under frontier molecular orbital theory? Include a visualisation of the frontier orbitals involved for your explanation.</p>
+<h3 id="propene-and-hydrobromic-acid">2.3. Propene and hydrobromic acid</h3>
+<p>Propene and hydrobromic acid can react to produce 1-bromopropane or 2-bromopropane. Report the reaction energies for both cases. Which one will be favoured? Which rule does this reflect for addition reactions?</p>
+<h3 id="cyclohexane-conformers">2.4. Cyclohexane conformers</h3>
+<p><strong>Warning:</strong> for these calculations, use Gaussian with HF 3-21G.</p>
+<p>Cyclohexane has three stable conformers: chair, twist, and boat. Compare the energies and geometry of each conformer, using descriptive bond lengths, bond angles, and dihedral angles.</p>
+<p>Probe the potential energy surface of the isomerisation between chair and twist by performing a relaxed scan of a tactically chosen dihedral angle coordinate. In order to find the transition that you care about, you will likely have to freeze another dihedral angle.</p>
+<p>First, sample 4 points along the relevant coordinate: chair, boat, and two in-between points. Identify the point of highest energy, and the points at either side: A and B.</p>
+<p>Then, perform a finer scan of four points around the peak: A, B, and two in-between points.</p>
+<p>Plot all of your calculated points as a potential energy surface. What is the energy barrier for isomerisation?</p>
+</body>
+</html>
