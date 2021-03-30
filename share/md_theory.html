@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>md_theory</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <link rel="stylesheet" href="gh.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS_CHTML-full" type="text/javascript"></script>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<h1 id="molecular-dynamics-of-a-lennard-jones-fluid">Molecular Dynamics of a Lennard-Jones Fluid</h1>
+<p>Say I want to investigate the behaviour of a Lennard-Jones fluid–a collection of particles whose only interaction with each other is by Pauli repulsion and dispersion. There may be many reasons for this; maybe our particles represent molecules which don’t react with each other very strongly, or we wish to decouple dispersion from other interactions in a more complex system.</p>
+<p>As an example, we will decide that we are modelling argon, which as a noble gas is not likely to bind to anything. Let’s examine a simple model of how argon atoms interact with each other.</p>
+<h2 id="lennard-jones-potential">Lennard-Jones Potential</h2>
+<p>To simulate the motion of argon gas, we first need an expression for its energy and force. Let’s re-familiarise ourselves with the form of the Lennard-Jones potential:</p>
+<p><span class="math inline">\(V_{LJ}(r) = 4 \epsilon [(\frac{\sigma}{r})^{12} - (\frac{\sigma}{r})^6]\)</span></p>
+<p>This potential is associated with each pair of atoms with a corresponding interatomic distance <span class="math inline">\(r\)</span>. It contains two parameters: <span class="math inline">\(\epsilon\)</span>, the depth of the well, and <span class="math inline">\(\sigma\)</span>, the distance at which the atoms start repelling. This can be understood as the particle size, since atoms closer together than <span class="math inline">\(\sigma\)</span> will repel, but remember that in practice, the atoms don’t have a hard sphere, they are infinitely small points in space which repel if they are brought too close together.</p>
+<p>The 12 - 6 exponential mathematical form has no direct basis in any physical law, the mathematical form of dispersion is much too complex to only depend on one interatomic distance. Instead, we know for sure that at a near distance, the atoms should repel each other due to Pauli exchange, they should have an equilibrium distance due to dispersion interactions, and should tend to stop interacting altogether at long distances.</p>
+<p>Now all we need in order to find the motion of the atoms is to turn this into a force. The direction of the force is easy, it’s a pairwise potential so it will point from one atom of the pair to the other. The magnitude of the force is just minus the derivative of the energy, which after some rearranging looks like this:</p>
+<p><span class="math inline">\(|F_{LJ}(r)| = 48 \epsilon [ \frac{\sigma^{12}}{r^{13}} - \frac{\sigma^{6}}{2r^{7}}]\)</span></p>
+<p>Which confirms that it changes sign at our equilibrium.</p>
+<p>The point of the Lennard-Jones potential is to write a function which fulfills all of these criteria, and can be modified at will to represent different well shapes. If we increase <span class="math inline">\(\epsilon\)</span>, the attraction will be stronger, and if we increase <span class="math inline">\(\sigma\)</span>, the repulsion will kick in at a longer distance.</p>
+<p>Now, what should the computer do with this force expression?</p>
+<h2 id="velocity-verlet-algorithm">Velocity Verlet Algorithm</h2>
+<p>Now that we have a way of calculating the force on each particle as a function of their positions, we wish to trace their trajectory in space. Unfortunately, we simply have too many variables to derive an equation of position with respect to time. As a result, we use a computer to carry out this time integration numerically.</p>
+<p>The program needs to be able to take in some positions <span class="math inline">\(\mathbf{r}_n\)</span>, velocities <span class="math inline">\(\mathbf{v}_n\)</span>, and return the new positions and velocities after a given small time interval <span class="math inline">\(\delta t\)</span>.</p>
+<p>The Velocity Verlet algorithm, named after Loup Verlet applies some simple Taylor expansions to find the values we need. For atom <span class="math inline">\(i\)</span>, we have:</p>
+<p><span class="math inline">\(\mathbf{r}^i_{n+1} = \mathbf{r}^i_n + \mathbf{v}^i_n \delta t + \frac{1}{2} \mathbf{a}_n \delta t^2\)</span></p>
+<p>Let’s analyse this for a second. The position at step <span class="math inline">\(n+1\)</span> is the position at the previous step plus any movement. This movement is the velocity at the previous step times the timestep, plus any modifications to that due to acceleration. For the velocity, we have a similar looking equation:</p>
+<p><span class="math inline">\(\mathbf{v}^i_{n+1} = \mathbf{v}^i_n + \frac{\mathbf{a}^i_n + \mathbf{a}^i_{n+1}}{2} \delta t\)</span></p>
+<p>Where now the velocity at the new step is equal to the velocity at the previous step plus an average of the modifications due to the acceleration at the previous and new steps.</p>
+<p>In both cases, we need values for acceleration. Fortunately, for a given set of atomic positions, we can work out the acceleration from Newton’s second law <span class="math inline">\(\mathbf{a}^i = \frac{\mathbf{F}^i_{LJ}}{m^i}\)</span>. That atomic mass might be something to consider if we want to change the code in the future. Note that the velocity equation requires the acceleration at step <span class="math inline">\(n+1\)</span>. This means that the steps in our Verlet algorithm would look like this:</p>
+<ol type="1">
+<li>Calculate the positions at <span class="math inline">\(n+1\)</span>.</li>
+<li>Calculate the acceleration at <span class="math inline">\(n+1\)</span>.</li>
+<li>Calculate the velocity at <span class="math inline">\(n+1\)</span>.</li>
+<li>Increase <span class="math inline">\(n\)</span> by 1.</li>
+<li>Loop back to step 1.</li>
+</ol>
+<p>The loop is repeated <span class="math inline">\(N\)</span> times, in order to simulate <span class="math inline">\(N \delta t\)</span> seconds of motion.</p>
+<p>We now have a working algorithm to integrate equations of motion. What’s very powerful about this implementation is that, in the limit of the timestep being zero, the energy of the calculation is conserved throughout, which is what we want to happen in a closed Newtonian system. This also works in any number of dimensions and with any number of atoms, provided that you are not asking too many calculations of your computer.</p>
+<p>But there are some serious wrinkles that we need to address before we can use this to probe physical properties of Lennard-Jones fluids.</p>
+<h2 id="initial-conditions">Initial Conditions</h2>
+<p>First of all, before we begin our calculation, we need to impart our atoms with some initial positions and velocities. In other words, we have to define the step <span class="math inline">\(n=0\)</span>.</p>
+<p>Here, many options are available to us, but let’s make a clever decision. If we allow any of our atoms to be very close together in our initial positions, the repulsive force between them will be immense. We should therefore pick an arrangement where the atoms are more or less ordered and spaced out equally. Here, we can take inspiration from crystallography. We arrange the atoms in a unit cell, and multiply the cell in all lattice directions in order to generate a simulation “box”.</p>
+<p>As for the velocities, we can randomly assign a direction for each atom. For the magnitudes, we can randomly pick from a normal distribution, however they will be subject to a constraint.</p>
+<h2 id="the-thermostat">The Thermostat</h2>
+<p>As we said earlier, it would be desirable to have as small a timestep as possible in order to ensure perfect conservation of energy in our calculation. Of course, if our time step is near 0, then so is our simulation time, and we won’t be able to observe any dynamics happening.</p>
+<p>The problem with having appreciably large time steps is that energy is artificially added to the system when two atoms don’t get a chance to slow down before approaching each other. Instead, they teleport a certain distance, and reach unrealistically high energy configurations. This increase in energy translates into an increase in overall accelerations and speeds of atoms, which in turn exacerbates the teleportation problem. In time, the atoms will tend to become infinitely fast, meaning that we can’t measure anything.</p>
+<p>Enter the <em>thermostat</em>. A thermostat is a trick by which we force the average velocity of all atoms to remain constant. We typically turn this average velocity into a temperature, following this equation:</p>
+<p><span class="math inline">\(T = \frac{2}{3k_B}(\bar{\frac{mv^2}{2}})\)</span></p>
+<p>Where <span class="math inline">\(k_B\)</span> is Boltzmann’s constant.</p>
+<p>By making the temperature constant, this allows us to measure temperature dependent properties of the fluid.</p>
+<p>There are all sorts of different thermostats but we are going to be using a very simple one: simply a rescaling of every velocity until the average velocity matches the desired temperature. We are going to apply this to the initial velocities, and then to every subsequent update of the velocity in the Verlet algorithm. Mind you, this is a serious tinkering of what used to be some quite simple maths, so now proving energy conservation wouldn’t be a given.</p>
+<p>There is one final nitpick about the way we are treating velocities here. We are working in a fixed frame of reference, which means that if all of the atoms randomly end up drifting in one direction, this will translate to an increase in temperature, which will affect our thermostat. Of course, we should be working in the frame of reference of the centre of mass of all atoms. So any overall drift is equally cancelled from each atom, and only then is the thermostat applied.</p>
+<p>We are ready for our final wrinkle in the way we are implementing the Velocity Verlet Algorithm.</p>
+<h2 id="periodic-boundary-conditions">Periodic Boundary Conditions</h2>
+<p>Up to now, we’ve been looking at atoms in a box, without addressing what should happen when an atom reaches the side of the box. If our model included rigid spheres for each atom, we could concieve of elastic collisions against a surface, and get a whole lot of information about their pressure.</p>
+<p>We’re going to do one better. We wish to represent the Lennard-Jones fluid in its condensed phase, therefore allowing it to change phase from solid to liquid if we wish. To simulate bulk properties of condensed matter, we need to remove any effects incurred by having artificial surfaces at the sides of the box.</p>
+<p>To fix this, we are going to impose <em>Periodic Boundary Conditions</em> on our simulation. If an atom exits our cell from one side, it should reappear on the other side. In effect, we are simulating a finite but periodic fluid, but if we use a large enough simulation cell, the fluid can be considered to behave as if it were infinite for any short-range property.</p>
+<p>Note a subtelty here, we are now dealing with infinite atoms, which means that calculating the interaction between one atom and all of the other ones would take forever. However, if we look at the interactions between an atom <span class="math inline">\(A\)</span> and all of the images of another atom <span class="math inline">\(B\)</span>, we will find that all but one of these distances are larger than half a box length. If we harken back to our Lennard-Jones potential, we remember that the potential becomes very small at large distances, therefore these images are safe to ignore. Taking only the minimal distance into account is called the <em>minimal-image convention</em>.</p>
+<p>We’ve now managed to make our simulation behave like bulk matter, and we are ready to put it all together.</p>
+<h2 id="putting-it-all-together">Putting it All Together</h2>
+<p>Let’s recap the steps we took:</p>
+<ol type="1">
+<li>We are implementing a Velocity Verlet Algorithm with the Lennard-Jones potential.</li>
+<li>We are setting initial conditions with atoms a crystal sites and imparting them with random velocities.</li>
+<li>We are applying a scaling thermostat to make the simulation stable in terms of velocities.</li>
+<li>We are applying periodic boundary conditions in order to better simulate bulk properties. The interatomic interactions follow the minimal-image convention.</li>
+</ol>
+<p>Here we go!</p>
+<p>We had to make quite a few choices here, which constitute the parameters of our calculation. To list a few:</p>
+<ol type="1">
+<li>The well depth and particle size of our Lennard-Jones potential.</li>
+<li>The mass of our particles</li>
+<li>The side of our unit cell for our initial conditions.</li>
+<li>The crystal sites we used.</li>
+<li>The amount of unit cells in our simulation cell.</li>
+<li>The temperature at which we set thermostat.</li>
+<li>The length of the time step.</li>
+</ol>
+<p>It is up to us as computational scientists to make informed choices for those parameters, in order to answer our research questions.</p>
+<p>Classical Molecular Dynamics is a very powerful tool, which is used to model anything from protein folding to carbon capture diffusion. I hope this was a useful introduction.</p>
+<p>See you next time!</p>
+</body>
+</html>
