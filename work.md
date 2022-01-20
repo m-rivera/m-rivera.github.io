@@ -7,14 +7,15 @@ permalink: work
 
 ## Introduction
 
-<p>I am a Computational Chemist, I write computer programs to model atoms and how they make up molecules and materials. As an Associate Lecturer in Teaching at UCL, I participate in anything to do with Computational Chemistry to undergraduate and postgraduate students of the Chemsitry Department. I am interested in any project which involves programming, maths, and creativity, with benevolent ends.</p>
+<p>I am a Computational Chemist, I write computer programs to model atoms and how they make up molecules and materials. As a Lecturer in Teaching at UCL, I participate in anything to do with Computational Chemistry to undergraduate and postgraduate students of the Chemsitry Department. I am interested in any project which involves programming, maths, and creativity, with benevolent ends.</p>
 
 <p>If you would be interested in collaborating with me in a work capacity, please email me at <a href="mailto:miguel.rivera@ucl.ac.uk">this address</a>. You can find my CV <a href="Miguel_Rivera_CV.pdf">here</a> and my doctoral thesis <a href="files/thesis.pdf">here</a>.</p>
 
 ## Professional History
 
 <ul>
-    <li><b>Associate Lecturer (Teaching)</b>, University College London, 02/2021 - <br/>
+    <li><b>Lecturer (Teaching)</b>, University College London, 01/2022 - <br/>
+    <li><b>Associate Lecturer (Teaching)</b>, University College London, 02/2021 - 12/2021<br/>
     I am involved in any teaching to do with Computational Chemistry or
     Programming in the Chemistry Department at UCL, London, UK. I also help
     developing E-learning resources to help students and the rest of the
