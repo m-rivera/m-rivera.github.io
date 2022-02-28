@@ -20,7 +20,7 @@ This students had mixed feelings about our strike for understandable reasons. Th
 I gave my opinion on the picket line, but thought that they needed expanding in writing.
 
 **In response to 1:**
-Strikes have a long term benefit for workers in general, whether the demands are met or not. We are here not only to ask that things improve but to send a message to university leaders: further attacks on education will be met with more disruption, so thin twice.
+Strikes have a long term benefit for workers in general, whether the demands are met or not. We are here not only to ask that things improve but to send a message to university leaders: further attacks on education will be met with more disruption, so think twice.
 
 Nevertheless, it is urgent that we improve conditions of university communities, and our present demands are realisable. Why, then, inflict disruption upon students rather than VCs and management?
 
@@ -29,7 +29,7 @@ First, it's important to realise that UCU strikes involve staff that are involve
 
 Simply put, strike action is a last resort after we have exerted all other options to make management prioritise the mission of the university over marketisation.
 
-The uncomfortable truth is that if students silently bear our action and do nothing about it, nothing is achieved. **The only way for change to come out of our strike is for students to pass on the pressure to their university leaders** by writing to them, being visible in their support of the strike, and engaging in discussions within their communities.
+The uncomfortable truth is that if students silently bear our action and do nothing about it, nothing is achieved. **The only way for change to come out of our strike is for students to pass on the pressure to their university leaders** e.g. by writing to them, being visible in their support of the strike, and engaging in discussions within their communities.
 
 More impactful organised student action also exists, and this is the role that falls on Student Unions when they materially support a strike. Individual students also have sway on their Union to get this started.
 
@@ -42,9 +42,9 @@ There is no recipe for the resolution of systemic struggles, at any scale from i
 
 Yes, some people's spheres of influences are larger than others, and if only university presidents/provosts shared these convictions, we wouldn't need to waste everybody's time but the fact is that they don't, so it's up to us to get the ball rolling.
 
-To take a common analogy, I could persist in driving a 4x4 to work instead of taking public transport because the difference is vanishingly small compared to industrial greenhouse gas emissions. But if I let Shell prevent me from living more sustainably at my scale, I am undermining the community of people who take the bus and who do have the power to put Shell out of business (or force them to change their business).
+To take a common analogy, I could persist in driving a 4x4 to work instead of walking because the difference is vanishingly small compared to industrial greenhouse gas emissions. But if I let Shell prevent me from living more sustainably at my scale, I am undermining the community of people who walk to work and who do have the power to put Shell out of business (or force them to change their business).
 
-So I take the bus.
+So I walk.
 
 Finally, speaking as an educator, I take strike action as a vocational statement too. Whether we like it or not, we are in a highly visible position to people at their most formative time, politically and professionally speaking. I find it more educationally enriching to propose an image of a professional who shows solidarity and takes action against bullying from employers than to teach some Python which they can catch up on later—so much more so that I forego pay for each day that I strike. Striking is learning, for me and for my students.
 
