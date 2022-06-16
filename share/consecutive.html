@@ -1,3 +1,51 @@
+  <script
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
+  type="text/javascript"></script>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<h4 id="consecutive-reactions">Consecutive reactions</h4>
+<p>The following Python script will plot the concentrations of molecules
+A, B and C in a pair consecutive reactions.</p>
+<p><span class="math inline">\(A\longrightarrow B\longrightarrow
+C\)</span></p>
+<p>The script uses equations from the lecture material to plot <span
+class="math inline">\([A]_t\)</span> (green), <span
+class="math inline">\([B]_t\)</span> (orange) and <span
+class="math inline">\([C]_t\)</span> (blue).</p>
+<p><span class="math inline">\([A]_t = [A]_0e^{-k_1t}\)</span></p>
+<p><span class="math inline">\([B]_t =
+\frac{k_1[A]_0}{k_2-k_1}(e^{-k_1t}-e^{-k_2t})\)</span></p>
+<p><span class="math inline">\([C]_t = [A]_0-[A]_t-[B]_t\)</span></p>
+<p>A dotted line is also plotted to show the time at which <span
+class="math inline">\([B]\)</span> is highest (<span
+class="math inline">\(t_{max}\)</span>).</p>
+<p><span class="math inline">\(t_{max} = \frac{\ln
+\frac{k_2}{k_1}}{k_2-k_1}\)</span></p>
+<h4 id="how-to-use-the-script">How to use the script</h4>
+<p>Parameters for <span class="math inline">\(k_1\)</span>
+(<code>k_1</code>) and <span class="math inline">\(k_2\)</span>
+(<code>k_2</code>) can be adjusted in the script. Likewise, the initial
+concentration of A, <span class="math inline">\([A]_0\)</span>
+(<code>A0</code>) can be changed. Running the script by clicking the
+“Activate” and “run” buttons, will produce a plot. If the x-axis is too
+long/short, try adjusting the run time (<code>t_end</code>).</p>
+<h4 id="things-to-try">Things to try</h4>
+<ul>
+<li>Read the script and recognise where the parameters are and where the
+formulas are.</li>
+<li>Adjust the values of <span class="math inline">\(k_1\)</span> and
+<span class="math inline">\(k_2\)</span> to where <span
+class="math inline">\(k_1 \gg k_2\)</span> and <span
+class="math inline">\(k_1 \ll k_2\)</span>. Think about what the plot
+should look like, then run the script.</li>
+<li>Now set <span class="math inline">\(k_1=k_2\)</span>. Run the
+script. Can you explain what happens?</li>
+</ul>
+</body>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
 
 <script type="text/x-thebe-config">
