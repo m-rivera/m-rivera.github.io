@@ -37,7 +37,6 @@ class Advice(ThreeDSlide):
         recs = bulleted_list([
             "Re-use as much as possible",
             "Collaborate",
-            "Publish your source code",
             r"Use in f{l}ipped classrooms"])
 
         for rec in recs:

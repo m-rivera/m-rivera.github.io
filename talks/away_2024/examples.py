@@ -128,7 +128,7 @@ class Examples(ThreeDSlide):
 
         self.next_slide()
 
-        algo_text = Tex("Configuration Space").move_to(top_left,aligned_edge=LEFT)
+        algo_text = Tex("Potential Energy Surfaces").move_to(top_left,aligned_edge=LEFT)
         self.play(*[FadeOut(mob) for mob in self.mobjects])
         self.play(Write(algo_text))
         self.next_slide()
