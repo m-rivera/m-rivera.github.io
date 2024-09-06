@@ -1,0 +1,79 @@
+{
+  "slides": [
+    {
+      "loop": false,
+      "auto_next": false,
+      "playback_rate": 1.0,
+      "reversed_playback_rate": 1.0,
+      "notes": "",
+      "dedent_notes": true,
+      "file": "slides/files/Advice/986915e1cfdfd9b65bc643858c3109d40215771b32568d87b6b3901ef029b332.mp4",
+      "rev_file": "slides/files/Advice/986915e1cfdfd9b65bc643858c3109d40215771b32568d87b6b3901ef029b332_reversed.mp4"
+    },
+    {
+      "loop": false,
+      "auto_next": false,
+      "playback_rate": 1.0,
+      "reversed_playback_rate": 1.0,
+      "notes": "",
+      "dedent_notes": true,
+      "file": "slides/files/Advice/a24254ffe18567bdf7dc6f31d1f4074035f66b4394b8a229cfb88be1b9a0fe09.mp4",
+      "rev_file": "slides/files/Advice/a24254ffe18567bdf7dc6f31d1f4074035f66b4394b8a229cfb88be1b9a0fe09_reversed.mp4"
+    },
+    {
+      "loop": false,
+      "auto_next": false,
+      "playback_rate": 1.0,
+      "reversed_playback_rate": 1.0,
+      "notes": "",
+      "dedent_notes": true,
+      "file": "slides/files/Advice/ef9de0aaa0dbdec17293659b42dd7301c3724680c27e90a00043058ce4d8e649.mp4",
+      "rev_file": "slides/files/Advice/ef9de0aaa0dbdec17293659b42dd7301c3724680c27e90a00043058ce4d8e649_reversed.mp4"
+    },
+    {
+      "loop": false,
+      "auto_next": false,
+      "playback_rate": 1.0,
+      "reversed_playback_rate": 1.0,
+      "notes": "",
+      "dedent_notes": true,
+      "file": "slides/files/Advice/3135bbb3d73cfd71f475a7f1f02ef40d4fdd6f1f1da6ecadce132a6f382f4ae0.mp4",
+      "rev_file": "slides/files/Advice/3135bbb3d73cfd71f475a7f1f02ef40d4fdd6f1f1da6ecadce132a6f382f4ae0_reversed.mp4"
+    },
+    {
+      "loop": false,
+      "auto_next": false,
+      "playback_rate": 1.0,
+      "reversed_playback_rate": 1.0,
+      "notes": "",
+      "dedent_notes": true,
+      "file": "slides/files/Advice/d19d7bb3d131f1b2a3516195dbabaacbe54d9f3ebc63ec2f10f5da770fbddb42.mp4",
+      "rev_file": "slides/files/Advice/d19d7bb3d131f1b2a3516195dbabaacbe54d9f3ebc63ec2f10f5da770fbddb42_reversed.mp4"
+    },
+    {
+      "loop": false,
+      "auto_next": false,
+      "playback_rate": 1.0,
+      "reversed_playback_rate": 1.0,
+      "notes": "",
+      "dedent_notes": true,
+      "file": "slides/files/Advice/29e84b029db9fe3ac3c42107469e19dca55e42a58415b9eaa10cadf4668a27e7.mp4",
+      "rev_file": "slides/files/Advice/29e84b029db9fe3ac3c42107469e19dca55e42a58415b9eaa10cadf4668a27e7_reversed.mp4"
+    },
+    {
+      "loop": false,
+      "auto_next": false,
+      "playback_rate": 1.0,
+      "reversed_playback_rate": 1.0,
+      "notes": "",
+      "dedent_notes": true,
+      "file": "slides/files/Advice/d775d379bf09cd0becc78079c694878d02fa2145bc5b41fb32d9fdd3c5a6f00b.mp4",
+      "rev_file": "slides/files/Advice/d775d379bf09cd0becc78079c694878d02fa2145bc5b41fb32d9fdd3c5a6f00b_reversed.mp4"
+    }
+  ],
+  "resolution": [
+    1920,
+    1080
+  ],
+  "background_color": "black"
+}
