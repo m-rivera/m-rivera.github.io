@@ -40,9 +40,9 @@ format:
 - This lecture is structured like your assessment.
 - I chose a research question based on my reading of secondary sources of analysis by Hao[@haoEmpireAIDreams2026] and Doctorow.[@doctorowReverseCentaursGuide2026]
 - My research question: **What are the present and ongoing costs of LLMs as a technology?**
-- For my background, I used some well sourced explainer videos as a starting point, and adapted the information for the audience, making my own visuals.[@TransformersTechLLMs, @andrejkarpathy1hrTalkIntro2023]
+- For my background, I used some well sourced explainer videos as a starting point, and adapted the information for the audience, making my own visuals.[@TransformersTechLLMs,@andrejkarpathy1hrTalkIntro2023]
 - For primary sources, I can't be exhaustive, so I'll focus on three separate areas which are well documented: environmental, social, and human harms.
-- In preparing this talk, I used Google and Google Scholar for finding literature, Affinity Designer for making figures, Quarto for making slides, and Mistral AI to help me debug Quarto slides.
+- In preparing this talk, I used Google and Google Scholar for finding literature, Affinity Designer for making figures, Quarto for making slides, and Mistral AI to help me debug Quarto slides and Claude to help reformat BibTeX links.
 :::
 
 # Background: What is AI and how does it work?
@@ -205,7 +205,7 @@ format:
 ![](./assets/hao.png){width=50% fig-alt="An article header titled: How theAI industry profits from catastrophy." fig-align="center"}
 
 :::incremental
-- Hao and Hernández investigated how data annotation work was targetted at populations in crisis, willing to accept poor working conditions.[@pageHowAIIndustrya]
+- Hao and Hernández investigated how data annotation work was targetted at populations in crisis, willing to accept poor working conditions.[@pageHowAIIndustry]
 
 - They interviewed Venezuelan data annotation workers exiled in Colombia. They also conducted data annotation work themselves to report on their working conditions.
 
