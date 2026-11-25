@@ -41,7 +41,7 @@ format:
 - I chose a research question based on my reading of secondary sources of analysis by Hao[@haoEmpireAIDreams2026] and Doctorow.[@doctorowReverseCentaursGuide2026]
 - My research question: **What are the present and ongoing costs of LLMs as a technology?**
 - For my background, I used some well sourced explainer videos[@TransformersTechLLMs] as a starting point,[@andrejkarpathy1hrTalkIntro2023] and adapted the information for the audience, making my own visuals.
-- For primary sources, I can't be exhaustive, so I'll focus on three separate areas which are well documented: environmental, social, and human harms.
+- For primary sources, I can't be exhaustive, so I'll focus on three separate areas which are well documented: environmental, social, and human costs.
 - In preparing this talk, I used Google and Google Scholar for finding literature, Affinity Designer for making figures, Quarto for making slides, and Mistral AI to help me debug Quarto slides and Claude to help reformat BibTeX links.
 :::
 
@@ -96,7 +96,7 @@ format:
 ![](./assets/overall_strategy.svg){width=100% fig-alt="Diagram of words being generated sequentially to make a sentence." .absolute top=120 left=10 .fragment}
 
 ## Embedding
-- To encode and generate text, sections of text are mapped on onto a many-dimensional space (12,288 or GPT-3). This is called **embedding**.
+- To encode and generate text, sections of text are mapped on onto a many-dimensional space (12,288 on GPT-3). This is called **embedding**.
 
 ![](./assets/embedding_1.svg){width=60% fig-alt="An xy plot showing words with similar meaning mapping to vectors which are close together." .absolute top=120 left=120 .fragment}
 
